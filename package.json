@@ -1,0 +1,13 @@
+{
+  "name": "site-conservas-latam",
+  "version": "1.0.0",
+  "description": "Site Conservas LATAM",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
