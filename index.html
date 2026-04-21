@@ -135,82 +135,69 @@
 <!-- ══════════════════════════════════════════
      1 · HERO SECTION
 ══════════════════════════════════════════ -->
-<section class="hero-bg text-white pt-6 pb-10 md:py-20 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+<section class="hero-bg text-white pt-8 pb-12 px-4">
+  <div class="max-w-xl mx-auto text-center">
 
-      <!-- ── Image (below content on mobile, right on desktop) ── -->
-      <div class="order-2 md:order-2">
-        <div class="relative">
-          <img
-            src="https://i.ibb.co/NnHFZ4G4/expert-historia.jpg"
-            alt="María Silva, especialista en conservas artesanales y autora de la guía 101 Recetas."
-            class="w-full rounded-2xl md:rounded-3xl shadow-2xl object-cover object-top max-h-56 sm:max-h-72 md:max-h-none md:aspect-auto md:h-[420px] lg:h-[480px]"
-            loading="eager"
-            fetchpriority="high"
-          />
+    <!-- Headline -->
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-5">
+      <span class="text-green-200 text-base sm:text-lg font-semibold block mb-2">¡Guía completa + 3 bonos exclusivos!</span>
+      <span class="text-yellow-300">101 Recetas de</span><br />
+      <span class="text-white">Conservas Artesanales</span>
+    </h1>
 
-          <!-- Badge: recipe count -->
-          <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-yellow-400 text-gray-900 rounded-full w-16 h-16 md:w-20 md:h-20 flex flex-col items-center justify-center shadow-xl select-none z-10">
-            <span class="font-black text-base md:text-xl leading-none">+101</span>
-            <span class="text-xs font-bold leading-none">RECETAS</span>
-          </div>
-
-          <!-- Badge: reviews -->
-          <div class="absolute -bottom-3 -left-3 md:-bottom-4 md:-left-4 bg-white rounded-xl md:rounded-2xl px-3 py-1.5 md:px-4 md:py-2 shadow-xl z-10">
-            <div class="stars text-xs md:text-sm">⭐⭐⭐⭐⭐</div>
-            <p class="text-xs text-gray-600 font-semibold mt-0.5">+500 personas satisfechas</p>
-          </div>
-        </div>
+    <!-- Expert image -->
+    <div class="relative mx-auto mb-8 max-w-xs sm:max-w-sm">
+      <img
+        src="https://i.ibb.co/5WS8mdFg/expert-historia.jpg"
+        alt="María Silva, especialista en conservas artesanales y autora de la guía 101 Recetas."
+        class="w-full rounded-2xl shadow-2xl object-cover object-top aspect-[4/3]"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 rounded-full w-16 h-16 flex flex-col items-center justify-center shadow-xl select-none z-10">
+        <span class="font-black text-base leading-none">+101</span>
+        <span class="text-xs font-bold leading-none">RECETAS</span>
       </div>
-
-      <!-- ── Content (first on mobile, left on desktop) ── -->
-      <div class="text-center md:text-left order-1 md:order-1 pt-2 md:pt-0">
-        <span class="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
-          ⚡ PAQUETE COMPLETO + 3 BONOS · SOLO $8,90 HOY · Descarga Inmediata
-        </span>
-
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-3">
-          <span class="text-green-200 text-lg sm:text-xl font-semibold block mb-1">¡Guía completa + 3 bonos exclusivos!</span>
-          <span class="text-yellow-300">101 Recetas de</span><br />
-          <span class="text-white">Conservas Artesanales</span>
-        </h1>
-
-        <p class="text-sm md:text-base lg:text-lg text-green-100 mb-5 leading-relaxed">
-          +101 recetas artesanales paso a paso
-          <strong class="text-yellow-300">+ 3 bonos exclusivos</strong>
-          para crear conservas crujientes, sabrosas y duraderas —
-          sin experiencia previa, sin equipos especiales.
-        </p>
-
-        <!-- Price anchor -->
-        <div class="bg-white/10 backdrop-blur rounded-2xl p-4 mb-5 inline-block w-full md:w-auto">
-          <p class="text-green-200 text-xs md:text-sm mb-1 text-center md:text-left">⏳ Precio especial por tiempo limitado</p>
-          <div class="flex items-center justify-center md:justify-start gap-3">
-            <span class="text-gray-400 line-through text-lg md:text-xl font-semibold">$49,90 USD</span>
-            <span class="text-yellow-300 font-black text-3xl md:text-4xl">$8,90 USD</span>
-          </div>
-          <p class="text-green-200 text-xs mt-1 text-center md:text-left">¡Ahorra 82% hoy · Guía + 3 Bonos · Garantía 7 días! 🎉</p>
-        </div>
-
-        <!-- CTA -->
-        <div class="mb-5">
-          <a href="#pricing"
-             class="cta-pulse inline-block bg-orange-500 text-white font-black text-base md:text-xl py-4 px-5 md:px-10 rounded-full shadow-2xl cursor-pointer text-center w-full md:w-auto transition-all">
-            🥒 ¡QUIERO MIS RECETAS + BONOS POR $8,90!
-          </a>
-          <p class="text-green-200 text-xs mt-2 text-center">👆 Descarga en segundos · Acceso de por vida</p>
-        </div>
-
-        <!-- Trust badges -->
-        <div class="flex flex-wrap gap-2 md:gap-3 justify-center md:justify-start">
-          <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-medium">🔒 Compra Segura</div>
-          <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-medium">✅ Garantía 7 Días</div>
-          <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-medium">⚡ Acceso Inmediato</div>
-        </div>
+      <div class="absolute -bottom-3 -left-3 bg-white rounded-xl px-3 py-1.5 shadow-xl z-10">
+        <div class="stars text-xs">⭐⭐⭐⭐⭐</div>
+        <p class="text-xs text-gray-600 font-semibold mt-0.5">+500 personas satisfechas</p>
       </div>
-
     </div>
+
+    <!-- Sub-headline -->
+    <p class="text-sm sm:text-base text-green-100 mb-6 leading-relaxed pt-2">
+      +101 recetas artesanales paso a paso
+      <strong class="text-yellow-300">+ 3 bonos exclusivos</strong>
+      para crear conservas crujientes, sabrosas y duraderas —
+      sin experiencia previa, sin equipos especiales.
+    </p>
+
+    <!-- CTA → recipe catalog (desire journey) -->
+    <div class="mb-6">
+      <a href="#catalogo-recetas"
+         class="cta-pulse inline-block bg-orange-500 text-white font-black text-lg py-4 px-10 rounded-full shadow-2xl cursor-pointer text-center w-full sm:w-auto transition-all">
+        👀 ¡VER LAS RECETAS INCLUIDAS!
+      </a>
+      <p class="text-green-200 text-xs mt-2">👆 Descubre todo lo que incluye la guía</p>
+    </div>
+
+    <!-- Price anchor -->
+    <div class="bg-white/10 backdrop-blur rounded-2xl p-4 mb-4 w-full">
+      <p class="text-green-200 text-xs mb-1">⏳ Precio especial por tiempo limitado</p>
+      <div class="flex items-center justify-center gap-3">
+        <span class="text-gray-400 line-through text-lg font-semibold">$49,90 USD</span>
+        <span class="text-yellow-300 font-black text-3xl">$8,90 USD</span>
+      </div>
+      <p class="text-green-200 text-xs mt-1">¡Ahorra 82% hoy · Guía + 3 Bonos · Garantía 7 días! 🎉</p>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="flex flex-wrap gap-2 justify-center">
+      <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium">🔒 Compra Segura</div>
+      <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium">✅ Garantía 7 Días</div>
+      <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium">⚡ Acceso Inmediato</div>
+    </div>
+
   </div>
 </section>
 
@@ -378,7 +365,7 @@
 <!-- ══════════════════════════════════════════
      5 · RECIPE CATALOG
 ══════════════════════════════════════════ -->
-<section class="py-14 px-4 bg-gray-50 fade-up">
+<section id="catalogo-recetas" class="py-14 px-4 bg-gray-50 fade-up">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-10">
       <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">+101 Recetas Incluidas</span>
