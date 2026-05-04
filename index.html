@@ -32,6 +32,20 @@
   </script>
 
   <!-- Google Fonts: Poppins -->
+  <!-- Preconnect to image CDN -->
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin />
+  <link rel="dns-prefetch" href="https://i.ibb.co" />
+
+  <!-- Preload hero image (above the fold) -->
+  <link rel="preload" as="image" href="https://i.ibb.co/d0T1j1Wx/adiocione-na-imagem-202604211831.jpg" fetchpriority="high" />
+
+  <!-- Prefetch first below-fold images -->
+  <link rel="prefetch" as="image" href="https://i.ibb.co/b5P7pxS6/espanho-1.png" />
+  <link rel="prefetch" as="image" href="https://i.ibb.co/yJQs4Yh/PICLES.jpg" />
+  <link rel="prefetch" as="image" href="https://i.ibb.co/4Rtgjbz3/CENOURA.jpg" />
+  <link rel="prefetch" as="image" href="https://i.ibb.co/WvRc294J/GELEIA-DE-TOMATE-CASEIRA.jpg" />
+  <link rel="prefetch" as="image" href="https://i.ibb.co/JRbf2mDs/quero-essa-imagem-202604161508.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -69,8 +83,11 @@
     .cta-pulse:hover { animation:none; transform:scale(1.06); box-shadow:0 10px 30px rgba(255,152,0,.5); }
 
     /* ── Fade-in-up on scroll ── */
-    .fade-up { opacity:0; transform:translateY(36px); transition:opacity .65s ease, transform .65s ease; }
+    .fade-up { opacity:0; transform:translateY(16px); transition:opacity .28s ease, transform .28s ease; }
     .fade-up.visible { opacity:1; transform:translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up { opacity:1; transform:none; transition:none; }
+    }
 
     /* ── Step circle ── */
     .step-circle {
@@ -116,6 +133,12 @@
 
     /* ── Stars ── */
     .stars { color:#f59e0b; }
+
+    /* ── Content-visibility for heavy off-screen sections ── */
+    .cv-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 600px;
+    }
   </style>
 </head>
 
@@ -364,7 +387,7 @@
 <!-- ══════════════════════════════════════════
      5 · RECIPE CATALOG
 ══════════════════════════════════════════ -->
-<section id="catalogo-recetas" class="py-14 px-4 bg-gray-50 fade-up">
+<section id="catalogo-recetas" class="py-14 px-4 bg-gray-50 fade-up cv-auto">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-10">
       <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">+101 Recetas Incluidas</span>
@@ -602,7 +625,7 @@
 <!-- ══════════════════════════════════════════
      6 · EXCLUSIVE BONUSES
 ══════════════════════════════════════════ -->
-<section class="py-14 px-4 bg-white fade-up">
+<section class="py-14 px-4 bg-white fade-up cv-auto">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
       <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">Solo por tiempo limitado</span>
@@ -1061,10 +1084,29 @@ document.querySelectorAll('.acc-trigger').forEach(function (btn) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0, rootMargin: '400px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(function (el) {
     observer.observe(el);
+  });
+})();
+
+/* ── Native lazy-load polyfill with early threshold ── */
+(function () {
+  if (!('loading' in HTMLImageElement.prototype)) return;
+  var imgObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        if (img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; }
+        imgObserver.unobserve(img);
+      }
+    });
+  }, { rootMargin: '500px 0px', threshold: 0 });
+
+  document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+    img.decoding = 'async';
+    imgObserver.observe(img);
   });
 })();
 
