@@ -210,12 +210,24 @@
 <!-- ══════════════════════════════════════════
      0 · ANNOUNCEMENT BAR
 ══════════════════════════════════════════ -->
-<div class="bar-shimmer text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold sticky top-0 z-50">
+<div class="bar-shimmer text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold sticky top-0 z-50" style="font-family:'Montserrat',sans-serif;">
   <span class="animate-pulse">🔥</span>
-  ¡ÚLTIMA OPORTUNIDAD! Descuento Exclusivo: Guía Completa + 3 Bonos por solo <strong>$8,90 USD</strong>. ¡Expira en
-  <span id="countdown" class="font-black text-yellow-300 mx-1 tabular-nums">--:--:--</span>!
+  ¡OFERTA RELÁMPAGO SOLO POR HOY, <span id="current-date" class="font-black text-yellow-200"></span>!
   <span class="animate-pulse">🔥</span>
+  &nbsp;·&nbsp;
+  Guía Completa + 3 Bonos:
+  <span style="text-decoration:line-through; opacity:.65; font-weight:600;">$49,90 USD</span>
+  <span style="color:#f0c040; font-weight:900; font-size:1.05em;">$8,90 USD</span>
+  &nbsp;·&nbsp; ¡Ahorra <strong>82%</strong> AHORA!
 </div>
+<script>
+  (function () {
+    var el = document.getElementById('current-date');
+    if (!el) return;
+    var opts = { day: 'numeric', month: 'long', year: 'numeric' };
+    el.textContent = new Date().toLocaleDateString('es-ES', opts).toUpperCase();
+  })();
+</script>
 
 
 <!-- ══════════════════════════════════════════
