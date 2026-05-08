@@ -4,51 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>101 Recetas de Conservas Artesanales – La Guía Definitiva para LATAM</title>
-  <meta name="description" content="La guía definitiva para crear conservas artesanales profesionales, crujientes y sabrosas con +101 recetas probadas e ilustradas paso a paso. ¡Descarga inmediata!" />
+  <meta name="description" content="La guía definitiva para crear conservas artesanales gourmet, 100% seguras y que duran años. +101 recetas probadas + 3 bonos exclusivos. ¡Acceso inmediato!" />
   <meta name="keywords" content="conservas artesanales, recetas conservas, encurtidos, mermeladas, fermentación, conservas caseras" />
-  <meta property="og:title" content="101 Recetas de Conservas Artesanales" />
-  <meta property="og:description" content="La guía definitiva para crear conservas artesanales profesionales, crujientes y sabrosas con +101 recetas probadas e ilustradas paso a paso." />
+  <meta property="og:title" content="101 Recetas de Conservas Artesanales Gourmet" />
+  <meta property="og:description" content="Crea conservas 100% seguras que duran años. +101 recetas artesanales + 3 bonos exclusivos. Solo $8,90 USD." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="101 Recetas de Conservas Artesanales" />
-  <meta name="twitter:description" content="La guía definitiva con +101 recetas probadas e ilustradas paso a paso." />
 
   <link rel="icon" type="image/svg+xml" href="images/vite.svg" />
 
   <!-- UTMify Tracking -->
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-subids
-    async
-    defer
-  ></script>
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
   <script>
     window.pixelId = "69e2ff93c34793a1dec9fc8e";
     var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
+    a.setAttribute("async", ""); a.setAttribute("defer", "");
     a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
     document.head.appendChild(a);
   </script>
 
-  <!-- Google Fonts: Poppins -->
-  <!-- Preconnect to image CDN -->
+  <!-- Preconnect & DNS -->
   <link rel="preconnect" href="https://i.ibb.co" crossorigin />
   <link rel="dns-prefetch" href="https://i.ibb.co" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Preload hero image (above the fold) -->
+  <!-- Preload hero image -->
   <link rel="preload" as="image" href="https://i.ibb.co/d0T1j1Wx/adiocione-na-imagem-202604211831.jpg" fetchpriority="high" />
 
   <!-- Prefetch first below-fold images -->
   <link rel="prefetch" as="image" href="https://i.ibb.co/b5P7pxS6/espanho-1.png" />
   <link rel="prefetch" as="image" href="https://i.ibb.co/yJQs4Yh/PICLES.jpg" />
   <link rel="prefetch" as="image" href="https://i.ibb.co/4Rtgjbz3/CENOURA.jpg" />
-  <link rel="prefetch" as="image" href="https://i.ibb.co/WvRc294J/GELEIA-DE-TOMATE-CASEIRA.jpg" />
   <link rel="prefetch" as="image" href="https://i.ibb.co/JRbf2mDs/quero-essa-imagem-202604161508.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Fonts: Playfair Display (headings) + Montserrat (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,97 +48,169 @@
       theme: {
         extend: {
           colors: {
-            primary:     '#4CAF50',
-            'primary-d': '#2E7D32',
-            'primary-l': '#81C784',
-            secondary:   '#FF9800',
-            'secondary-d':'#F57C00',
-            accent:      '#FFEB3B',
+            forest:  '#1a4731',
+            'forest-d': '#122e21',
+            sea:     '#2E8B57',
+            'sea-l': '#4aad75',
+            gold:    '#c9a227',
+            'gold-l':'#f0c040',
+            cream:   '#faf7f0',
+            'cream-d':'#f0ead8',
+            bark:    '#4a3728',
+            'bark-l':'#7a5c4a',
           },
-          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:    ['Montserrat', 'sans-serif'],
+          },
         }
       }
     }
   </script>
 
   <style>
-    *, *::before, *::after { font-family: 'Poppins', sans-serif; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #faf7f0; color: #4a3728; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
     html { scroll-behavior: smooth; }
 
-    /* ── CTA pulse animation ── */
+    /* ── CTA pulse ── */
     @keyframes ctaPulse {
-      0%,100% { transform:scale(1);   box-shadow:0 0 0 0   rgba(255,152,0,.7); }
-      50%      { transform:scale(1.03);box-shadow:0 0 0 12px rgba(255,152,0,0);  }
+      0%,100% { transform:scale(1);   box-shadow:0 0 0 0   rgba(201,162,39,.65); }
+      50%      { transform:scale(1.03);box-shadow:0 0 0 14px rgba(201,162,39,0); }
     }
     .cta-pulse { animation: ctaPulse 2.2s infinite; }
-    .cta-pulse:hover { animation:none; transform:scale(1.06); box-shadow:0 10px 30px rgba(255,152,0,.5); }
+    .cta-pulse:hover { animation:none; transform:scale(1.06); transition:transform .18s; }
 
     /* ── Fade-in-up on scroll ── */
     .fade-up { opacity:0; transform:translateY(16px); transition:opacity .28s ease, transform .28s ease; }
     .fade-up.visible { opacity:1; transform:translateY(0); }
-    @media (prefers-reduced-motion: reduce) {
-      .fade-up { opacity:1; transform:none; transition:none; }
+    @media (prefers-reduced-motion: reduce) { .fade-up { opacity:1; transform:none; transition:none; } }
+
+    /* ── Hero ── */
+    .hero-bg {
+      background: linear-gradient(150deg, #0d2e1c 0%, #1a4731 45%, #122e21 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-bg::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(201,162,39,.12) 0%, transparent 70%);
+      pointer-events:none;
     }
 
     /* ── Step circle ── */
     .step-circle {
       min-width:48px; height:48px; border-radius:50%;
-      background:linear-gradient(135deg,#4CAF50,#2E7D32);
+      background:linear-gradient(135deg,#2E8B57,#1a4731);
       display:flex; align-items:center; justify-content:center;
-      color:#fff; font-weight:800; font-size:1.15rem;
-      box-shadow:0 4px 14px rgba(76,175,80,.4);
+      color:#f0c040; font-weight:800; font-size:1.15rem;
+      box-shadow:0 4px 14px rgba(26,71,49,.35);
+      font-family: 'Montserrat', sans-serif;
     }
-
-    /* ── Hero gradient ── */
-    .hero-bg { background:linear-gradient(135deg,#1b5e20 0%,#2e7d32 55%,#1b5e20 100%); }
-    .hero-bg h1 { text-shadow: 0 2px 8px rgba(0,0,0,.35); }
-    .hero-bg p  { text-shadow: 0 1px 4px rgba(0,0,0,.25); }
 
     /* ── Accordion ── */
     .acc-body { max-height:0; overflow:hidden; transition:max-height .35s ease; }
-    .acc-body.open { max-height:400px; }
+    .acc-body.open { max-height:500px; }
     .acc-icon { transition:transform .3s ease; }
     .acc-icon.open { transform:rotate(180deg); }
 
     /* ── Recipe card hover ── */
-    .recipe-card { transition:transform .2s, box-shadow .2s; }
-    .recipe-card:hover { transform:translateY(-5px); box-shadow:0 14px 32px rgba(0,0,0,.13); }
+    .recipe-card { transition:transform .22s, box-shadow .22s; }
+    .recipe-card:hover { transform:translateY(-6px) scale(1.01); box-shadow:0 18px 40px rgba(26,71,49,.18); }
 
-    /* ── Pricing card highlight ── */
-    @media(min-width:768px) { .pricing-featured { transform:scale(1.04); } }
-
-    /* ── Sticky mobile CTA ── */
+    /* ── Bonus card ── */
+    .bonus-card { background:linear-gradient(135deg,#f0fdf4,#d1fae5); border:2px solid #6ee7b7; }
+    .bonus-card-gold {
+      background: linear-gradient(135deg, #fffbeb, #fef3c7);
+      border: 2px solid #c9a227;
+      box-shadow: 0 8px 32px rgba(201,162,39,.22);
+    }
 
     /* ── Guarantee badge ── */
     .guarantee-badge {
-      background:linear-gradient(135deg,#fff9e6,#fff3c0);
-      border:2px solid #FFEB3B;
-      border-radius:1rem;
+      background:linear-gradient(135deg,#fffbeb,#fef3c7);
+      border:2px solid #c9a227; border-radius:1rem;
     }
 
-    /* ── Section wave top ── */
-    .wave-top svg { display:block; }
+    /* ── Trust seal animated ── */
+    @keyframes sealPop {
+      0%   { transform:scale(.85); opacity:0; }
+      60%  { transform:scale(1.08); }
+      100% { transform:scale(1); opacity:1; }
+    }
+    .seal-pop { animation: sealPop .55s ease both; }
 
-    /* ── Bonus card ── */
-    .bonus-card { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:2px solid #86efac; }
+    /* ── Carousel ── */
+    .carousel-track { display:flex; transition:transform .4s cubic-bezier(.25,.8,.25,1); will-change:transform; }
+    .carousel-wrap { overflow:hidden; }
+    .carousel-btn {
+      width:40px; height:40px; border-radius:50%;
+      background: #1a4731; color:#f0c040;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer; border:none; flex-shrink:0;
+      box-shadow:0 4px 12px rgba(0,0,0,.2);
+      transition:background .18s, transform .18s;
+    }
+    .carousel-btn:hover { background:#2E8B57; transform:scale(1.08); }
+    .carousel-dot { width:8px; height:8px; border-radius:50%; background:#cbd5e1; transition:background .2s, transform .2s; }
+    .carousel-dot.active { background:#c9a227; transform:scale(1.3); }
+
+    /* ── Micro-interactions ── */
+    .btn-hover { transition:transform .16s, box-shadow .16s, filter .16s; }
+    .btn-hover:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.18); filter:brightness(1.04); }
+    .card-hover { transition:transform .2s, box-shadow .2s; }
+    .card-hover:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(26,71,49,.15); }
+
+    /* ── Social proof popup ── */
+    #sp-popup {
+      position:fixed; bottom:20px; left:16px; z-index:9999;
+      background:#fff; border-left:4px solid #2E8B57;
+      border-radius:12px; padding:12px 16px;
+      box-shadow:0 8px 32px rgba(0,0,0,.18);
+      max-width:280px; font-family:'Montserrat',sans-serif;
+      transform:translateX(-120%); transition:transform .45s cubic-bezier(.34,1.56,.64,1);
+    }
+    #sp-popup.show { transform:translateX(0); }
+
+    /* ── Section badge pill ── */
+    .badge-pill {
+      display:inline-block; font-family:'Montserrat',sans-serif;
+      font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+      padding:.25rem .75rem; border-radius:999px;
+    }
+
+    /* ── Gold divider ── */
+    .gold-divider { height:3px; background:linear-gradient(90deg,transparent,#c9a227,transparent); border:none; margin:0; }
+
+    /* ── Content-visibility for heavy sections ── */
+    .cv-auto { content-visibility:auto; contain-intrinsic-size:0 600px; }
 
     /* ── Stars ── */
     .stars { color:#f59e0b; }
 
-    /* ── Content-visibility for heavy off-screen sections ── */
-    .cv-auto {
-      content-visibility: auto;
-      contain-intrinsic-size: 0 600px;
+    /* ── Announcement bar shimmer ── */
+    @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+    .bar-shimmer {
+      background: linear-gradient(90deg, #7f1d1d 0%, #991b1b 40%, #b91c1c 50%, #991b1b 60%, #7f1d1d 100%);
+      background-size:200% 100%;
+      animation:shimmer 3s infinite linear;
+    }
+
+    /* ── Pricing card glow ── */
+    .pricing-glow { box-shadow:0 0 0 0 rgba(201,162,39,.5); animation:priceGlow 2.5s infinite; }
+    @keyframes priceGlow {
+      0%,100% { box-shadow:0 0 24px rgba(201,162,39,.3); }
+      50%      { box-shadow:0 0 48px rgba(201,162,39,.6); }
     }
   </style>
 </head>
 
-<body class="bg-white text-gray-800 overflow-x-hidden">
+<body class="bg-cream overflow-x-hidden">
 
 <!-- ══════════════════════════════════════════
      0 · ANNOUNCEMENT BAR
 ══════════════════════════════════════════ -->
-<div class="bg-red-600 text-white text-center py-2 px-4 text-sm font-semibold sticky top-0 z-50">
+<div class="bar-shimmer text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold sticky top-0 z-50">
   <span class="animate-pulse">🔥</span>
   ¡ÚLTIMA OPORTUNIDAD! Guía Completa + 3 Bonos por solo <strong>$8,90 USD</strong> — Oferta expira hoy a medianoche. Tiempo restante:
   <span id="countdown" class="font-black text-yellow-300 mx-1 tabular-nums">--:--:--</span>
@@ -158,170 +221,220 @@
 <!-- ══════════════════════════════════════════
      1 · HERO SECTION
 ══════════════════════════════════════════ -->
-<section class="hero-bg text-white pt-8 pb-12 px-4">
+<section class="hero-bg text-white pt-10 pb-14 px-4">
   <div class="max-w-xl mx-auto text-center">
 
-    <!-- Headline -->
-    <h1 class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-4">
-      <span class="text-green-200 text-base sm:text-lg font-semibold block mb-2">¡Guía completa + 3 bonos exclusivos!</span>
-      <span class="text-yellow-300">101 Recetas de</span><br />
-      <span class="text-white">Conservas Artesanales</span>
+    <!-- Eyebrow -->
+    <div class="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 rounded-full px-4 py-1.5 text-xs font-semibold text-yellow-200 mb-5 tracking-wide">
+      🏺 Guía Completa + 3 Bonos Exclusivos
+    </div>
+
+    <!-- H1 -->
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-5" style="font-family:'Playfair Display',serif; text-shadow:0 2px 12px rgba(0,0,0,.4);">
+      <span class="block text-yellow-300">Crea Conservas Gourmet</span>
+      <span class="block text-white">100% Seguras que Duran Años</span>
+      <span class="block text-green-200 text-xl sm:text-2xl md:text-3xl mt-1">y Transforman tu Cocina en un Santuario de Sabor</span>
     </h1>
 
     <!-- Expert image -->
-    <div class="relative mx-auto mb-8 max-w-xs sm:max-w-sm">
+    <div class="relative mx-auto mb-7 max-w-xs sm:max-w-sm">
       <img
         src="https://i.ibb.co/d0T1j1Wx/adiocione-na-imagem-202604211831.jpg"
-        alt="María Silva, especialista en conservas artesanales y autora de la guía 101 Recetas."
+        alt="María Silva, especialista en conservas artesanales gourmet y autora de la guía 101 Recetas."
         class="w-full rounded-2xl shadow-2xl object-cover object-center aspect-[4/3]"
-        loading="eager"
-        fetchpriority="high"
+        loading="eager" fetchpriority="high"
       />
-      <div class="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 rounded-full w-16 h-16 flex flex-col items-center justify-center shadow-xl select-none z-10">
+      <div class="absolute -top-3 -right-3 bg-gold text-forest rounded-full w-16 h-16 flex flex-col items-center justify-center shadow-xl select-none z-10" style="font-family:'Montserrat',sans-serif;">
         <span class="font-black text-base leading-none">+101</span>
         <span class="text-xs font-bold leading-none">RECETAS</span>
       </div>
       <div class="absolute -bottom-3 -left-3 bg-white rounded-xl px-3 py-1.5 shadow-xl z-10">
         <div class="stars text-xs">⭐⭐⭐⭐⭐</div>
-        <p class="text-xs text-gray-600 font-semibold mt-0.5">+500 personas satisfechas</p>
+        <p class="text-xs text-bark font-semibold mt-0.5" style="font-family:'Montserrat',sans-serif;">+500 personas satisfechas</p>
       </div>
     </div>
 
     <!-- Sub-headline -->
-    <p class="text-sm sm:text-base text-green-100 mb-6 leading-relaxed pt-2">
-      Descubre el arte de transformar ingredientes simples en
-      <strong class="text-yellow-300">obras maestras que deleitan los sentidos</strong>
-      y llenan de orgullo tu mesa. ¡Conviértete en el/la chef que siempre soñaste ser!
+    <p class="text-sm sm:text-base text-green-100 mb-6 leading-relaxed" style="font-family:'Montserrat',sans-serif; text-shadow:0 1px 4px rgba(0,0,0,.25);">
+      Descubre el Método Secreto para más de
+      <strong class="text-yellow-300">100 Recetas Artesanales que Deleitan los Sentidos</strong>
+      y llenan de orgullo tu mesa. ¡Con 3 Bonos Exclusivos incluidos hoy!
     </p>
 
-    <!-- CTA → recipe catalog (desire journey) -->
-    <div class="mb-6">
-      <a href="#catalogo-recetas"
-         class="cta-pulse inline-block bg-orange-500 text-white font-black text-lg py-4 px-10 rounded-full shadow-2xl cursor-pointer text-center w-full sm:w-auto transition-all">
-        ✨ ¡DESCUBRE EL SECRETO DEL SABOR!
+    <!-- CTA principal -->
+    <div class="mb-5">
+      <a href="https://pay.hotmart.com/N105440462S?checkoutMode=10" target="_blank" rel="noopener"
+         class="cta-pulse btn-hover inline-block bg-gold text-forest font-black text-lg py-4 px-8 rounded-full shadow-2xl cursor-pointer text-center w-full sm:w-auto"
+         style="font-family:'Montserrat',sans-serif;">
+        🥒 ¡QUIERO MIS CONSERVAS SEGURAS Y DELICIOSAS!
       </a>
-      <p class="text-green-200 text-xs mt-2">👆 Mira las 101 recetas que vas a dominar</p>
+      <p class="text-green-200 text-xs mt-2" style="font-family:'Montserrat',sans-serif;">👆 Acceso inmediato · Garantía 7 días</p>
+    </div>
+
+    <!-- Animated trust seals -->
+    <div class="flex flex-wrap gap-2 justify-center mb-5">
+      <div class="seal-pop flex items-center gap-1.5 bg-white/15 border border-white/25 rounded-full px-3 py-1.5 text-xs font-semibold text-white" style="animation-delay:.1s;font-family:'Montserrat',sans-serif;">
+        🔒 100% Seguro
+      </div>
+      <div class="seal-pop flex items-center gap-1.5 bg-white/15 border border-white/25 rounded-full px-3 py-1.5 text-xs font-semibold text-white" style="animation-delay:.25s;font-family:'Montserrat',sans-serif;">
+        🏺 Dura Años
+      </div>
+      <div class="seal-pop flex items-center gap-1.5 bg-white/15 border border-white/25 rounded-full px-3 py-1.5 text-xs font-semibold text-white" style="animation-delay:.4s;font-family:'Montserrat',sans-serif;">
+        ✅ Garantía 7 Días
+      </div>
+      <div class="seal-pop flex items-center gap-1.5 bg-white/15 border border-white/25 rounded-full px-3 py-1.5 text-xs font-semibold text-white" style="animation-delay:.55s;font-family:'Montserrat',sans-serif;">
+        ⚡ Acceso Inmediato
+      </div>
     </div>
 
     <!-- Price anchor -->
-    <div class="bg-white/10 backdrop-blur rounded-2xl p-4 mb-4 w-full">
-      <p class="text-green-200 text-xs mb-1">⏳ Precio especial por tiempo limitado</p>
+    <div class="bg-white/10 backdrop-blur rounded-2xl p-4 w-full">
+      <p class="text-green-200 text-xs mb-1" style="font-family:'Montserrat',sans-serif;">⏳ Precio especial por tiempo limitado</p>
       <div class="flex items-center justify-center gap-3">
-        <span class="text-gray-400 line-through text-lg font-semibold">$49,90 USD</span>
-        <span class="text-yellow-300 font-black text-3xl">$8,90 USD</span>
+        <span class="text-gray-400 line-through text-lg font-semibold" style="font-family:'Montserrat',sans-serif;">$49,90 USD</span>
+        <span class="text-yellow-300 font-black text-3xl" style="font-family:'Playfair Display',serif;">$8,90 USD</span>
       </div>
-      <p class="text-green-200 text-xs mt-1">¡Ahorra 82% hoy · Guía + 3 Bonos · Garantía 7 días! 🎉</p>
-    </div>
-
-    <!-- Trust badges -->
-    <div class="flex flex-wrap gap-2 justify-center">
-      <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium">🔒 Compra Segura</div>
-      <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium">✅ Garantía 7 Días</div>
-      <div class="flex items-center gap-1 bg-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium">⚡ Acceso Inmediato</div>
+      <p class="text-green-200 text-xs mt-1" style="font-family:'Montserrat',sans-serif;">¡Ahorra 82% hoy · Guía + 3 Bonos · Garantía 7 días! 🎉</p>
     </div>
 
   </div>
 </section>
+
+<hr class="gold-divider" />
 
 
 <!-- ══════════════════════════════════════════
      2 · BENEFITS
 ══════════════════════════════════════════ -->
-<section class="bg-green-600 text-white py-14 px-4 fade-up">
+<section class="py-14 px-4 fade-up" style="background:linear-gradient(135deg,#1a4731 0%,#2E8B57 100%);">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-2xl md:text-3xl font-black text-center mb-3">La experiencia que vas a vivir 🎯</h2>
-    <p class="text-green-100 text-center text-sm mb-8">+500 personas ya lo sintieron — tú serás la próxima</p>
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">La experiencia que vas a vivir 🎯</h2>
+      <p class="text-green-200 text-sm" style="font-family:'Montserrat',sans-serif;">+500 personas ya lo sintieron — tú serás la próxima</p>
+    </div>
 
     <div class="grid sm:grid-cols-2 gap-4">
-      <!-- 1 -->
-      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5">
+      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5 card-hover">
         <div class="step-circle">1</div>
         <div>
-          <h3 class="font-bold text-lg">Sabor que Sorprende</h3>
-          <p class="text-green-100 text-sm mt-1 leading-relaxed">El aroma al abrir el frasco, el color perfecto, el sabor que hace cerrar los ojos... eso es lo que aprenderás a crear.</p>
+          <h3 class="font-bold text-lg text-white" style="font-family:'Playfair Display',serif;">Sabor que Sorprende</h3>
+          <p class="text-green-100 text-sm mt-1 leading-relaxed" style="font-family:'Montserrat',sans-serif;">El aroma al abrir el frasco, el color perfecto, el sabor que hace cerrar los ojos... eso es lo que aprenderás a crear.</p>
         </div>
       </div>
-      <!-- 2 -->
-      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5">
+      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5 card-hover">
         <div class="step-circle">2</div>
         <div>
-          <h3 class="font-bold text-lg">El Orgullo de Crear</h3>
-          <p class="text-green-100 text-sm mt-1 leading-relaxed">Imagina mostrar tus frascos y escuchar "¡hiciste esto tú!". Esa sensación de logro empieza en tu primera receta.</p>
+          <h3 class="font-bold text-lg text-white" style="font-family:'Playfair Display',serif;">El Orgullo de Crear</h3>
+          <p class="text-green-100 text-sm mt-1 leading-relaxed" style="font-family:'Montserrat',sans-serif;">Imagina mostrar tus frascos y escuchar "¡hiciste esto tú!". Esa sensación de logro empieza en tu primera receta.</p>
         </div>
       </div>
-      <!-- 3 -->
-      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5">
+      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5 card-hover">
         <div class="step-circle">3</div>
         <div>
-          <h3 class="font-bold text-lg">Crujiente, Firme y Duradero</h3>
-          <p class="text-green-100 text-sm mt-1 leading-relaxed">Esa textura que truena al morderla y dura meses en el frasco. El secreto está en las técnicas que te enseñamos.</p>
+          <h3 class="font-bold text-lg text-white" style="font-family:'Playfair Display',serif;">Crujiente, Firme y Duradero</h3>
+          <p class="text-green-100 text-sm mt-1 leading-relaxed" style="font-family:'Montserrat',sans-serif;">Esa textura que truena al morderla y dura meses en el frasco. El secreto está en las técnicas que te enseñamos.</p>
         </div>
       </div>
-      <!-- 4 -->
-      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5">
+      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5 card-hover">
         <div class="step-circle">4</div>
         <div>
-          <h3 class="font-bold text-lg">Arte en Cada Frasco</h3>
-          <p class="text-green-100 text-sm mt-1 leading-relaxed">Cada conserva que hagas es una pequeña obra de arte — hermosa, llena de sabor y lista para deleitar a quienes más amas.</p>
+          <h3 class="font-bold text-lg text-white" style="font-family:'Playfair Display',serif;">Arte en Cada Frasco</h3>
+          <p class="text-green-100 text-sm mt-1 leading-relaxed" style="font-family:'Montserrat',sans-serif;">Cada conserva que hagas es una pequeña obra de arte — hermosa, llena de sabor y lista para deleitar a quienes más amas.</p>
         </div>
       </div>
-      <!-- 5 -->
-      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5 sm:col-span-2">
+      <div class="flex items-start gap-4 bg-white/10 rounded-2xl p-5 sm:col-span-2 card-hover">
         <div class="step-circle">5</div>
         <div>
-          <h3 class="font-bold text-lg">Ingredientes Simples, Resultados Memorables</h3>
-          <p class="text-green-100 text-sm mt-1 leading-relaxed">Los mismos vegetales del mercado de siempre, transformados en algo que la gente no puede dejar de probar. Eso es la magia de las conservas artesanales.</p>
+          <h3 class="font-bold text-lg text-white" style="font-family:'Playfair Display',serif;">Ingredientes Simples, Resultados Memorables</h3>
+          <p class="text-green-100 text-sm mt-1 leading-relaxed" style="font-family:'Montserrat',sans-serif;">Los mismos vegetales del mercado de siempre, transformados en algo que la gente no puede dejar de probar. Eso es la magia de las conservas artesanales.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<hr class="gold-divider" />
+
 
 <!-- ══════════════════════════════════════════
      3 · PROBLEM / SOLUTION
 ══════════════════════════════════════════ -->
-<section class="py-14 px-4 bg-gray-50 fade-up">
+<section class="py-14 px-4 bg-cream fade-up">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-2xl md:text-3xl font-black text-center text-gray-800 mb-2">
-      ¿Tus conservas no tienen el sabor<br class="hidden sm:block" />
-      <span class="text-green-600">que siempre soñaste crear?</span>
-    </h2>
-    <p class="text-center text-gray-500 text-sm mb-10">+500 personas vivieron esta frustración — y la convirtieron en orgullo con esta Guía</p>
+    <div class="text-center mb-10">
+      <span class="badge-pill bg-red-100 text-red-700 mb-3">El Problema</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark mb-2">
+        ¿Cansada/o de Conservas Aburridas<br class="hidden sm:block" />
+        <span class="text-sea">o con Miedo a que se Dañen?</span>
+      </h2>
+      <p class="text-bark-l text-sm" style="font-family:'Montserrat',sans-serif;">+500 personas vivieron esta frustración — y la convirtieron en orgullo con esta Guía</p>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-6 mb-8">
       <!-- Problems -->
-      <div class="bg-red-50 border border-red-200 rounded-2xl p-6">
-        <h3 class="font-bold text-lg text-red-600 mb-4">😔 Lo que sientes ahora</h3>
-        <ul class="space-y-3 text-gray-700 text-sm leading-relaxed">
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">😞</span><p>Abres el frasco y el olor no es el que esperabas. El sabor es <strong>plano, sin vida</strong>.</p></li>
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">😤</span><p>Horas en la cocina y el resultado es <strong>decepcionante</strong> — ni tú misma quieres comerlo.</p></li>
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">😫</span><p>No sabes qué especias combinan ni por qué tus conservas siempre quedan <strong>blandas</strong>.</p></li>
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">🙁</span><p>Sientes que no tienes el "don" para esto y que nunca lograrás algo que <strong>enorgullezca a tu familia</strong>.</p></li>
+      <div class="bg-red-50 border border-red-200 rounded-2xl p-6 card-hover">
+        <h3 class="font-bold text-lg text-red-600 mb-4 flex items-center gap-2" style="font-family:'Playfair Display',serif;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#fca5a5"/><path d="M12 7v5m0 3v1" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"/></svg>
+          Lo que sientes ahora
+        </h3>
+        <ul class="space-y-3 text-bark text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#f87171"/></svg>
+            <p>Abres el frasco y el olor no es el que esperabas. El sabor es <strong>plano, sin vida</strong>.</p>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#f87171"/></svg>
+            <p>Horas en la cocina y el resultado es <strong>decepcionante</strong> — ni tú misma quieres comerlo.</p>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#f87171"/></svg>
+            <p>No sabes qué especias combinan ni por qué tus conservas siempre quedan <strong>blandas</strong>.</p>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#f87171"/></svg>
+            <p>Sientes miedo de que se dañen y que <strong>sean un riesgo para tu familia</strong>.</p>
+          </li>
         </ul>
       </div>
 
       <!-- Solution -->
-      <div class="bg-green-50 border border-green-200 rounded-2xl p-6">
-        <h3 class="font-bold text-lg text-green-600 mb-4">🎉 Lo que vas a sentir</h3>
-        <ul class="space-y-3 text-gray-700 text-sm leading-relaxed">
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">🤩</span><p>Ese aroma irresistible al abrir el frasco que te hace saber: <strong>esto quedó perfecto</strong>.</p></li>
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">🥒</span><p>El <strong>crujido inconfundible</strong> al primer mordisco — firme, sabroso, como en un restaurante.</p></li>
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">👩‍🍳</span><p>El orgullo de mostrar tus frascos y escuchar: <strong>"¡no puedo creer que lo hiciste tú!"</strong></p></li>
-          <li class="flex items-start gap-2"><span class="text-xl mt-0.5">💚</span><p>La alegría de crear algo memorable que dura meses y <strong>llena de amor cada mesa</strong>.</p></li>
+      <div class="bg-green-50 border border-green-200 rounded-2xl p-6 card-hover">
+        <h3 class="font-bold text-lg text-sea mb-4 flex items-center gap-2" style="font-family:'Playfair Display',serif;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#86efac"/><path d="M8 12l3 3 5-5" stroke="#15803d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Lo que vas a sentir
+        </h3>
+        <ul class="space-y-3 text-bark text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>Ese aroma irresistible al abrir el frasco que te hace saber: <strong>esto quedó perfecto</strong>.</p>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>El <strong>crujido inconfundible</strong> al primer mordisco — firme, sabroso, como en un restaurante.</p>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>El orgullo de mostrar tus frascos y escuchar: <strong>"¡no puedo creer que lo hiciste tú!"</strong></p>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>La <strong>tranquilidad de saber</strong> que tus conservas son 100% seguras y duran años.</p>
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- Transition banner -->
-    <div class="bg-green-600 text-white rounded-2xl p-6 text-center">
-      <p class="text-base md:text-lg font-semibold leading-relaxed">
+    <div class="rounded-2xl p-6 text-center text-white" style="background:linear-gradient(135deg,#1a4731,#2E8B57);">
+      <p class="text-base md:text-lg font-semibold leading-relaxed" style="font-family:'Montserrat',sans-serif;">
         ¡Es hora de crear conservas que te hagan sentir orgullosa/o! Por <strong class="text-yellow-300">solo $8,90 USD</strong> accedes a
         <strong class="text-yellow-300">101 recetas artesanales probadas</strong> que transforman ingredientes simples en experiencias memorables. 🏆
       </p>
     </div>
   </div>
 </section>
+
+<hr class="gold-divider" />
 
 
 <!-- ══════════════════════════════════════════
@@ -330,296 +443,276 @@
 <section class="py-14 px-4 bg-white fade-up">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
-      <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">Metodología Exclusiva</span>
-      <h2 class="text-2xl md:text-3xl font-black text-gray-800">
-        El Método <span class="text-green-600">"Conserva Perfecta"</span> en 6 Pasos
+      <span class="badge-pill bg-green-100 text-sea mb-3">Metodología Exclusiva</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark">
+        El Método <span class="text-sea">"Conserva Perfecta"</span> en 6 Pasos
       </h2>
-      <p class="text-gray-500 text-sm mt-2">El sistema que convierte ingredientes del día a día en obras de arte que saben y huelen a gloria</p>
+      <p class="text-bark-l text-sm mt-2" style="font-family:'Montserrat',sans-serif;">El sistema que convierte ingredientes del día a día en obras de arte que saben y huelen a gloria</p>
     </div>
 
-    <!-- Infografía principal del método -->
     <div class="flex justify-center mb-10">
-      <img
-        src="https://i.ibb.co/b5P7pxS6/espanho-1.png"
-        alt="Infografía del Método Conserva Perfecta en 6 Pasos"
-        class="w-full max-w-3xl rounded-2xl shadow-md object-contain"
-        loading="lazy"
-      />
+      <img src="https://i.ibb.co/b5P7pxS6/espanho-1.png"
+           alt="Infografía del Método Conserva Perfecta en 6 Pasos"
+           class="w-full max-w-3xl rounded-2xl shadow-md object-contain" loading="lazy" decoding="async" />
     </div>
 
-    <!-- Descripciones detalladas de cada paso -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="flex items-start gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+      <div class="flex items-start gap-3 bg-cream rounded-2xl p-4 border border-cream-d card-hover">
         <div class="step-circle flex-shrink-0">1</div>
-        <p class="text-gray-500 text-sm leading-relaxed pt-2"><strong class="text-gray-700">Selección con cuidado:</strong> Aprende a elegir vegetales en su punto exacto — el secreto que marca la diferencia entre una conserva mediocre y una que sorprende.</p>
+        <p class="text-bark-l text-sm leading-relaxed pt-2" style="font-family:'Montserrat',sans-serif;"><strong class="text-bark">Selección con cuidado:</strong> Aprende a elegir vegetales en su punto exacto — el secreto que marca la diferencia entre una conserva mediocre y una que sorprende.</p>
       </div>
-      <div class="flex items-start gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+      <div class="flex items-start gap-3 bg-cream rounded-2xl p-4 border border-cream-d card-hover">
         <div class="step-circle flex-shrink-0">2</div>
-        <p class="text-gray-500 text-sm leading-relaxed pt-2"><strong class="text-gray-700">El toque que da textura:</strong> Los cortes y tratamientos previos que garantizan ese crujido irresistible en cada bocado. Aquí nace la magia.</p>
+        <p class="text-bark-l text-sm leading-relaxed pt-2" style="font-family:'Montserrat',sans-serif;"><strong class="text-bark">El toque que da textura:</strong> Los cortes y tratamientos previos que garantizan ese crujido irresistible en cada bocado. Aquí nace la magia.</p>
       </div>
-      <div class="flex items-start gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+      <div class="flex items-start gap-3 bg-cream rounded-2xl p-4 border border-cream-d card-hover">
         <div class="step-circle flex-shrink-0">3</div>
-        <p class="text-gray-500 text-sm leading-relaxed pt-2"><strong class="text-gray-700">El alma de la receta:</strong> Combinaciones de especias que despiertan los sentidos. Incluye +25 mezclas probadas que huelen y saben a perfección.</p>
+        <p class="text-bark-l text-sm leading-relaxed pt-2" style="font-family:'Montserrat',sans-serif;"><strong class="text-bark">El alma de la receta:</strong> Combinaciones de especias que despiertan los sentidos. Incluye +25 mezclas probadas que huelen y saben a perfección.</p>
       </div>
-      <div class="flex items-start gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+      <div class="flex items-start gap-3 bg-cream rounded-2xl p-4 border border-cream-d card-hover">
         <div class="step-circle flex-shrink-0">4</div>
-        <p class="text-gray-500 text-sm leading-relaxed pt-2"><strong class="text-gray-700">Conservación sin miedo:</strong> El ritual del sellado correcto — ese momento en que sabes que tu creación va a durar meses perfecta, lista para ser disfrutada.</p>
+        <p class="text-bark-l text-sm leading-relaxed pt-2" style="font-family:'Montserrat',sans-serif;"><strong class="text-bark">Conservación sin miedo:</strong> El ritual del sellado correcto — ese momento en que sabes que tu creación va a durar meses perfecta, lista para ser disfrutada.</p>
       </div>
-      <div class="flex items-start gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+      <div class="flex items-start gap-3 bg-cream rounded-2xl p-4 border border-cream-d card-hover">
         <div class="step-circle flex-shrink-0">5</div>
-        <p class="text-gray-500 text-sm leading-relaxed pt-2"><strong class="text-gray-700">Sabores vivos y profundos:</strong> Fermentos que burbujean con vida y desarrollan aromas únicos. Una experiencia que no encontrarás en ningún supermercado.</p>
+        <p class="text-bark-l text-sm leading-relaxed pt-2" style="font-family:'Montserrat',sans-serif;"><strong class="text-bark">Sabores vivos y profundos:</strong> Fermentos que burbujean con vida y desarrollan aromas únicos. Una experiencia que no encontrarás en ningún supermercado.</p>
       </div>
-      <div class="flex items-start gap-3 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+      <div class="flex items-start gap-3 bg-cream rounded-2xl p-4 border border-cream-d card-hover">
         <div class="step-circle flex-shrink-0">6</div>
-        <p class="text-gray-500 text-sm leading-relaxed pt-2"><strong class="text-gray-700">El placer de la espera:</strong> Guardar tus frascos sabiendo que dentro de semanas o meses vas a abrir algo extraordinario — sabor, color y textura intactos.</p>
+        <p class="text-bark-l text-sm leading-relaxed pt-2" style="font-family:'Montserrat',sans-serif;"><strong class="text-bark">El placer de la espera:</strong> Guardar tus frascos sabiendo que dentro de semanas o meses vas a abrir algo extraordinario — sabor, color y textura intactos.</p>
       </div>
     </div>
 
     <div class="text-center mt-10">
-      <a href="#pricing" class="cta-pulse inline-block bg-orange-500 text-white font-black text-lg py-4 px-10 rounded-full shadow-xl">
+      <a href="#pricing" class="cta-pulse btn-hover inline-block bg-gold text-forest font-black text-lg py-4 px-10 rounded-full shadow-xl" style="font-family:'Montserrat',sans-serif;">
         ✨ ¡QUIERO CREAR EXPERIENCIAS MEMORABLES!
       </a>
     </div>
   </div>
 </section>
 
+<hr class="gold-divider" />
+
 
 <!-- ══════════════════════════════════════════
-     5 · RECIPE CATALOG
+     5 · RECIPE CAROUSEL
 ══════════════════════════════════════════ -->
-<section id="catalogo-recetas" class="py-14 px-4 bg-gray-50 fade-up cv-auto">
+<section id="catalogo-recetas" class="py-14 px-4 bg-cream fade-up cv-auto">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-10">
-      <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">+101 Recetas Incluidas</span>
-      <h2 class="text-2xl md:text-3xl font-black text-gray-800">Siente el aroma solo con verlas 👀</h2>
-      <p class="text-gray-500 text-sm mt-2">Una pequeña muestra de las 101 experiencias sensoriales que vas a crear</p>
+      <span class="badge-pill bg-amber-100 text-amber-700 mb-3">+101 Recetas Incluidas</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark">Más de 100 Experiencias Sensoriales te Esperan</h2>
+      <p class="text-bark-l text-sm mt-2" style="font-family:'Montserrat',sans-serif;">Siente el aroma solo con verlas — una pequeña muestra de lo que vas a dominar</p>
     </div>
 
-    <!-- 2 cols mobile · 3 cols desktop · object-contain so images never crop -->
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+    <!-- Carousel container -->
+    <div class="relative">
+      <div class="carousel-wrap rounded-2xl" id="recipesCarousel">
+        <div class="carousel-track" id="recipesTrack">
 
-      <!-- 1 · Encurtidos Clásicos — real photo -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/yJQs4Yh/PICLES.jpg"
-               alt="Frasco de picles clássicos crocantes."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Clásico</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Encurtidos Clásicos Crujientes</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Ese crujido que se escucha al morder — ácido, fresco y absolutamente irresistible.</p>
-        </div>
+          <!-- 1 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/yJQs4Yh/PICLES.jpg" alt="Encurtidos clásicos crujientes en frasco." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-green-100 text-sea text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Clásico</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Encurtidos Clásicos Crujientes</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Ese crujido ácido que se escucha al morder — absolutamente irresistible.</p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/4Rtgjbz3/CENOURA.jpg" alt="Conservas de zanahoria con jengibre." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Exótico</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Zanahoria con Jengibre</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">El calor suave del jengibre que se funde con el dulzor de la zanahoria.</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/WvRc294J/GELEIA-DE-TOMATE-CASEIRA.jpg" alt="Mermelada de tomate casera." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Dulce</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Mermelada de Tomate</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Dulce con toque ácido que sorprende. El secreto gourmet en casa.</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/5XVzrmyY/BETERRABA-E-CEBOLA.jpg" alt="Conservas de remolacha y cebolla." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Vegetariano</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Remolacha y Cebolla</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Ese rojo intenso que ilumina cualquier plato — terrosa y dulce.</p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/C5kJRDpL/PICLES-DE-CEBOLA-ROXA.jpg" alt="Encurtidos de cebolla morada." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Práctico</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Cebolla Morada Rápida</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Ese rosa vibrante en 20 minutos. Ideal para tacos y arepas.</p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/v6XWzxNp/ABOBORA-COM-CANELA.jpg" alt="Conservas de calabaza con canela." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Estacional</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Calabaza con Canela</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">El aroma de canela que llena la cocina. Como un postre en frasco.</p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/1Y9KykVH/PICLES-MIISTO-COLORIDO.jpg" alt="Encurtidos mixtos coloridos." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-violet-100 text-violet-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Completa</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Encurtidos Mixtos Coloridos</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Un arcoíris en frasco — colores vivos que despiertan el apetito.</p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/1Y9TtMfv/PIMENT-O-ASSADO.jpg" alt="Pimiento asado en conserva." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Gourmet</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Pimiento Asado</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Humo suave y dulzor profundo. Sedoso, intenso, memorable.</p>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/Psr5hLqQ/09-geleia-pimenta-mel-Me-dia.jpg" alt="Mermelada de chile con miel." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-red-100 text-red-800 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Picante</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Chile con Miel</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Dulce en los labios, picante que se despierta. Adictiva desde el primero.</p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/jPBzNJpf/10-conserva-abobrinha-alho-Me-dia.jpg" alt="Calabacín con ajo en conserva." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Saludable</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Calabacín con Ajo</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Suave, con ese toque de ajo que impregna todo el frasco.</p>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/gFd3WJsf/11-picles-couve-flor-crocante-Me-dia.jpg" alt="Coliflor crujiente en conserva." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Probiótico</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Coliflor Crujiente</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Firme, ácida, con ese efervescente probiótico que se siente vivo.</p>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/230kQ65P/12-conserva-maca-canela-Me-dia.jpg" alt="Manzana con canela en conserva." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Frutas</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Manzana con Canela</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">El aroma de la cocina de abuela. Nostalgia en cada frasco.</p>
+            </div>
+          </div>
+
+          <!-- 13 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/j98hby9W/13-picles-rabanete-crocante-Me-dia.jpg" alt="Rábano crujiente en conserva." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-lime-100 text-lime-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Low Carb</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Rábano Crujiente</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Vibrante, picantito y con un crujido que no para.</p>
+            </div>
+          </div>
+
+          <!-- 14 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/d0CV8n26/14-conserva-berinjela-italiana-Me-dia.jpg" alt="Berenjena italiana en conserva." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Berenjena</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Berenjena a la Italiana</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Aceite de oliva y hierbas que perfuman el frasco. Un bocado mediterráneo.</p>
+            </div>
+          </div>
+
+          <!-- 15 -->
+          <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-d flex-shrink-0" style="width:200px; margin-right:16px;">
+            <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
+              <img src="https://i.ibb.co/B2RZQLZd/15-geleia-morango-artesanal-Me-dia.jpg" alt="Mermelada de fresa artesanal." class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-3">
+              <span class="inline-block bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full mb-1" style="font-family:'Montserrat',sans-serif;">Frutas Rojas</span>
+              <h3 class="font-bold text-bark text-xs leading-snug" style="font-family:'Montserrat',sans-serif;">Mermelada de Fresa</h3>
+              <p class="text-bark-l text-xs mt-1 leading-snug" style="font-family:'Montserrat',sans-serif;">Ese rojo brillante y perfume de fresa fresca. Incomparable.</p>
+            </div>
+          </div>
+
+        </div><!-- end track -->
+      </div><!-- end wrap -->
+
+      <!-- Controls -->
+      <div class="flex items-center justify-between mt-4 px-1">
+        <button class="carousel-btn" id="recipesPrev" aria-label="Anterior">&#8592;</button>
+        <div class="flex gap-2" id="recipesDots"></div>
+        <button class="carousel-btn" id="recipesNext" aria-label="Siguiente">&#8594;</button>
       </div>
-
-      <!-- 2 · Zanahoria con Jengibre — real photo -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/4Rtgjbz3/CENOURA.jpg"
-               alt="Frasco de conservas de cenoura com gengibre."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Exótico</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Zanahoria con Jengibre</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">El calor suave del jengibre que se funde con el dulzor de la zanahoria. Una combinación que enamora.</p>
-        </div>
-      </div>
-
-      <!-- 3 · Mermelada de Tomate -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/WvRc294J/GELEIA-DE-TOMATE-CASEIRA.jpg"
-               alt="Frasco de geleia de tomate caseira."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Dulce</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Mermelada de Tomate Casera</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Dulce con un toque ácido que sorprende en cada cucharada. El secreto de las mesas gourmet en casa.</p>
-        </div>
-      </div>
-
-      <!-- 4 · Remolacha y Cebolla -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/5XVzrmyY/BETERRABA-E-CEBOLA.jpg"
-               alt="Frasco de beterraba e cebola em conserva."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Vegetariano</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Remolacha y Cebolla</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Ese color rojo intenso que ilumina cualquier plato — terrosa, dulce y visualmente impactante.</p>
-        </div>
-      </div>
-
-      <!-- 5 · Cebolla Morada -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/C5kJRDpL/PICLES-DE-CEBOLA-ROXA.jpg"
-               alt="Frasco de picles de cebola roxa."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Práctico</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Encurtidos de Cebolla Morada Rápida</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Ese rosa vibrante que embellece tacos, arepas y hamburguesas. Hecha en 20 minutos, impresiona siempre.</p>
-        </div>
-      </div>
-
-      <!-- 6 · Calabaza con Canela -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/v6XWzxNp/ABOBORA-COM-CANELA.jpg"
-               alt="Frasco de abóbora com canela em conserva."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Estacional</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Calabaza con Canela</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">El aroma de canela que llena la cocina y ese sabor cálido que abraza. Como un postre en frasco.</p>
-        </div>
-      </div>
-
-      <!-- 7 · Encurtidos Mixtos -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/1Y9KykVH/PICLES-MIISTO-COLORIDO.jpg"
-               alt="Frasco de picles mistos coloridos."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-violet-100 text-violet-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Completa</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Encurtidos Mixtos Coloridos</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Un arcoíris en frasco — colores vivos, sabores que se complementan y un aroma que despierta el apetito.</p>
-        </div>
-      </div>
-
-      <!-- 8 · Pimiento Asado -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/1Y9TtMfv/PIMENT-O-ASSADO.jpg"
-               alt="Frasco de pimentões assados em azeite."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Gourmet</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Pimiento Asado</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Ese humo suave y dulzor profundo que se siente antes de probar. Sedoso, intenso, memorable.</p>
-        </div>
-      </div>
-
-      <!-- 9 · Mermelada de Chile -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/Psr5hLqQ/09-geleia-pimenta-mel-Me-dia.jpg"
-               alt="Frasco de geleia de pimenta e mel."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-red-100 text-red-800 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Picante</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Mermelada de Chile con Miel</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Dulce en los labios, picante que se despierta despacio. Adictiva desde el primer bocado.</p>
-        </div>
-      </div>
-
-      <!-- 10 · Calabacín con Ajo -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/jPBzNJpf/10-conserva-abobrinha-alho-Me-dia.jpg"
-               alt="Frasco de abobrinha com alho em conserva."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Saludable</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Calabacín con Ajo</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Suave, con ese toque de ajo que impregna todo el frasco. Sencilla pero profundamente sabrosa.</p>
-        </div>
-      </div>
-
-      <!-- 11 · Coliflor Crujiente -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/gFd3WJsf/11-picles-couve-flor-crocante-Me-dia.jpg"
-               alt="Frasco de picles de couve-flor crocante."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Probiótico</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Encurtidos de Coliflor Crujiente</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Firme, ácida, con ese efervescente probiótico que se siente vivo. Bueno para el cuerpo y para el alma.</p>
-        </div>
-      </div>
-
-      <!-- 12 · Manzana con Canela -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/230kQ65P/12-conserva-maca-canela-Me-dia.jpg"
-               alt="Frasco de maçã com canela em conserva."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Frutas</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Manzana con Canela</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">El aroma de la cocina de abuela — dulce, especiado y reconfortante. Nostalgia en cada frasco.</p>
-        </div>
-      </div>
-
-      <!-- 13 · Rábano Crujiente -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/j98hby9W/13-picles-rabanete-crocante-Me-dia.jpg"
-               alt="Frasco de picles de rabanete crocante."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-lime-100 text-lime-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Low Carb</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Encurtidos de Rábano Crujiente</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Vibrante, picantito y con un crujido que no para. El snack artesanal que engancha desde el primero.</p>
-        </div>
-      </div>
-
-      <!-- 14 · Berenjena a la Italiana -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/d0CV8n26/14-conserva-berinjela-italiana-Me-dia.jpg"
-               alt="Frasco de berinjela italiana em conserva."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Berenjena</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Conservas de Berenjena a la Italiana</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Suave, con aceite de oliva y hierbas que perfuman el frasco. Un bocado que transporta al Mediterráneo.</p>
-        </div>
-      </div>
-
-      <!-- 15 · Mermelada de Fresa -->
-      <div class="recipe-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
-          <img src="https://i.ibb.co/B2RZQLZd/15-geleia-morango-artesanal-Me-dia.jpg"
-               alt="Frasco de geleia de morango artesanal."
-               class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-3">
-          <span class="inline-block bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full mb-2">Frutas Rojas</span>
-          <h3 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">Mermelada de Fresa Artesanal</h3>
-          <p class="text-gray-400 text-xs mt-1 hidden md:block">Ese rojo brillante y el perfume de fresa fresca. Una mermelada que no tiene comparación con las del supermercado.</p>
-        </div>
-      </div>
-
     </div>
 
     <!-- More recipes banner -->
-    <div class="mt-8 bg-green-600 rounded-2xl p-6 text-center text-white">
-      <p class="text-xl md:text-2xl font-black">+ ¡Más de 85 experiencias más te esperan adentro! 🎁</p>
-      <p class="text-green-100 text-sm mt-2">Encurtidos · Mermeladas · Fermentados · Jarabes · Salmueras · y muchas sorpresas más</p>
-      <a href="#pricing" class="inline-block mt-4 bg-orange-500 text-white font-black text-base py-3 px-8 rounded-full shadow-xl transition-all hover:bg-orange-600">
+    <div class="mt-8 rounded-2xl p-6 text-center text-white" style="background:linear-gradient(135deg,#1a4731,#2E8B57);">
+      <p class="text-xl md:text-2xl font-black" style="font-family:'Playfair Display',serif;">+ ¡Más de 85 experiencias más te esperan adentro! 🎁</p>
+      <p class="text-green-100 text-sm mt-2" style="font-family:'Montserrat',sans-serif;">Encurtidos · Mermeladas · Fermentados · Jarabes · Salmueras · y muchas sorpresas más</p>
+      <a href="#pricing" class="inline-block mt-4 bg-gold text-forest font-black text-base py-3 px-8 rounded-full shadow-xl transition-all btn-hover" style="font-family:'Montserrat',sans-serif;">
         ✨ ¡QUIERO TODAS LAS RECETAS POR $8,90!
       </a>
     </div>
   </div>
 </section>
+
+<hr class="gold-divider" />
 
 
 <!-- ══════════════════════════════════════════
@@ -628,121 +721,120 @@
 <section class="py-14 px-4 bg-white fade-up cv-auto">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
-      <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">Solo por tiempo limitado</span>
-      <h2 class="text-2xl md:text-3xl font-black text-gray-800">
-        3 Bonos Exclusivos <span class="text-yellow-500">¡GRATIS HOY!</span> 🎁
+      <span class="badge-pill bg-yellow-100 text-amber-700 mb-3">Solo por tiempo limitado</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark">
+        ¡Tu Paquete Completo Incluye <span class="text-gold">3 Bonos Exclusivos</span> que Valen Oro! 🎁
       </h2>
-      <p class="text-gray-500 text-sm mt-2">Incluidos sin costo adicional en el Paquete Completo</p>
+      <p class="text-bark-l text-sm mt-2" style="font-family:'Montserrat',sans-serif;">Incluidos sin costo adicional — solo por tiempo limitado</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Bonus 1 -->
-      <div class="bonus-card rounded-2xl p-6 relative">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest">GRATIS HOY</div>
+      <div class="bonus-card rounded-2xl p-6 relative card-hover">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-forest text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest" style="font-family:'Montserrat',sans-serif;">GRATIS HOY</div>
         <div class="mt-4 mb-4">
-          <img
-            src="https://i.ibb.co/JRbf2mDs/quero-essa-imagem-202604161508.jpg"
-            alt="Guía Completa de Especias para Conservas con varios frascos de especias y conservas."
-            class="w-full rounded-xl shadow-md object-cover"
-            loading="lazy"
-          />
+          <img src="https://i.ibb.co/JRbf2mDs/quero-essa-imagem-202604161508.jpg"
+               alt="Guía Completa de Especias para Conservas con frascos de especias."
+               class="w-full rounded-xl shadow-md object-cover" loading="lazy" decoding="async" />
         </div>
-        <h3 class="font-black text-gray-800 text-base text-center mb-2">Bono 1: Guía Completa de Especias para Conservas</h3>
-        <p class="text-gray-600 text-sm text-center leading-relaxed">25 combinaciones de especias que realzan el sabor natural de los vegetales. Aprende las proporciones correctas para cada tipo de conserva.</p>
-        <p class="text-center mt-3 text-green-600 font-bold text-sm">Valor: $27 USD</p>
+        <h3 class="font-bold text-bark text-base text-center mb-2" style="font-family:'Playfair Display',serif;">Bono 1: Guía Completa de Especias para Conservas</h3>
+        <p class="text-bark-l text-sm text-center leading-relaxed" style="font-family:'Montserrat',sans-serif;">25 combinaciones de especias que realzan el sabor natural de los vegetales. Las proporciones exactas para cada tipo de conserva.</p>
+        <p class="text-center mt-3 text-sea font-bold text-sm" style="font-family:'Montserrat',sans-serif;">Valor: $27 USD</p>
       </div>
 
       <!-- Bonus 2 -->
-      <div class="bonus-card rounded-2xl p-6 relative">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest">GRATIS HOY</div>
+      <div class="bonus-card rounded-2xl p-6 relative card-hover">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-forest text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest" style="font-family:'Montserrat',sans-serif;">GRATIS HOY</div>
         <div class="mt-4 mb-4">
-          <img
-            src="https://i.ibb.co/xtL3Yb5B/Carda-pio-Inteligente-de-Conservas.jpg"
-            alt="Cardápio Inteligente de Conservas com diversos potes de conservas e um tablet exibindo um plano de refeições."
-            class="w-full rounded-xl shadow-md object-cover"
-            loading="lazy"
-          />
+          <img src="https://i.ibb.co/xtL3Yb5B/Carda-pio-Inteligente-de-Conservas.jpg"
+               alt="Menú Inteligente de Conservas con plan de 4 semanas."
+               class="w-full rounded-xl shadow-md object-cover" loading="lazy" decoding="async" />
         </div>
-        <h3 class="font-black text-gray-800 text-base text-center mb-2">Bono 2: Menú Inteligente de Conservas</h3>
-        <p class="text-gray-600 text-sm text-center leading-relaxed">Plan de 4 semanas con recetas variadas y lista de compras optimizada. ¡Nunca más te quedarás sin ideas para hacer en casa!</p>
-        <p class="text-center mt-3 text-green-600 font-bold text-sm">Valor: $17 USD</p>
+        <h3 class="font-bold text-bark text-base text-center mb-2" style="font-family:'Playfair Display',serif;">Bono 2: Menú Inteligente de Conservas</h3>
+        <p class="text-bark-l text-sm text-center leading-relaxed" style="font-family:'Montserrat',sans-serif;">Plan de 4 semanas con recetas variadas y lista de compras optimizada. ¡Nunca más te quedarás sin ideas para hacer en casa!</p>
+        <p class="text-center mt-3 text-sea font-bold text-sm" style="font-family:'Montserrat',sans-serif;">Valor: $17 USD</p>
       </div>
 
-      <!-- Bonus 3 -->
-      <div class="bonus-card rounded-2xl p-6 relative">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest">GRATIS HOY</div>
+      <!-- Bonus 3 — DESTAQUE MÁXIMO -->
+      <div class="bonus-card-gold rounded-2xl p-6 relative card-hover" style="position:relative;">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-forest text-gold-l text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest" style="font-family:'Montserrat',sans-serif;">⭐ IMPRESCINDIBLE</div>
+        <div class="absolute top-3 right-3 bg-red-500 text-white text-xs font-black px-2 py-0.5 rounded-full" style="font-family:'Montserrat',sans-serif;">GRATIS HOY</div>
         <div class="mt-4 mb-4">
-          <img
-            src="https://i.ibb.co/JRCq2Spd/QUERO-ESSA-IMAGEM-202604161512.jpg"
-            alt="Guía Completa de Esterilización: Materiales de Cocina y Verduras."
-            class="w-full rounded-xl shadow-md object-cover"
-            loading="lazy"
-          />
+          <img src="https://i.ibb.co/JRCq2Spd/QUERO-ESSA-IMAGEM-202604161512.jpg"
+               alt="Guía de Esterilización Profesional para conservas 100% seguras."
+               class="w-full rounded-xl shadow-md object-cover" loading="lazy" decoding="async" />
         </div>
-        <h3 class="font-black text-gray-800 text-base text-center mb-2">Bono 3: Guía de Esterilización Profesional</h3>
-        <p class="text-gray-600 text-sm text-center leading-relaxed">Técnicas avanzadas de esterilización, fermentación y almacenamiento para conservas que duran meses. 30 recetas de jarabes y salmueras infalibles.</p>
-        <p class="text-center mt-3 text-green-600 font-bold text-sm">Valor: $37 USD</p>
+        <h3 class="font-bold text-forest text-base text-center mb-2" style="font-family:'Playfair Display',serif;">Bono 3: Guía de Esterilización Profesional 🔒</h3>
+        <p class="text-bark text-sm text-center leading-relaxed mb-3" style="font-family:'Montserrat',sans-serif;"><strong>El Secreto para Conservas 100% Seguras que Duran Años sin Riesgos.</strong> Técnicas avanzadas de esterilización, fermentación y almacenamiento. 30 recetas de jarabes y salmueras infalibles.</p>
+        <div class="bg-forest/10 border border-forest/20 rounded-xl p-3 text-center">
+          <p class="text-forest font-bold text-xs" style="font-family:'Montserrat',sans-serif;">🛡️ ¡Tu Paz Mental Garantizada!</p>
+          <p class="text-bark-l text-xs mt-1" style="font-family:'Montserrat',sans-serif;">Todas las técnicas probadas para que tu familia esté siempre protegida.</p>
+        </div>
+        <p class="text-center mt-3 text-sea font-bold text-sm" style="font-family:'Montserrat',sans-serif;">Valor: $37 USD</p>
       </div>
     </div>
 
     <!-- Total value -->
-    <div class="mt-8 text-center bg-gray-900 text-white rounded-2xl p-6">
-      <p class="text-gray-400 text-sm mb-1">Valor total del paquete completo</p>
-      <p class="text-gray-400 line-through text-xl">$49,90 USD</p>
-      <p class="text-yellow-300 font-black text-4xl">Solo $8,90 USD hoy 🎉</p>
-      <p class="text-gray-400 text-sm mt-1">¡Ahorras 82% hoy!</p>
+    <div class="mt-8 text-center rounded-2xl p-6" style="background:linear-gradient(135deg,#0d2e1c,#1a4731);">
+      <p class="text-green-300 text-sm mb-1" style="font-family:'Montserrat',sans-serif;">Valor total del paquete completo</p>
+      <p class="text-green-400 line-through text-xl" style="font-family:'Montserrat',sans-serif;">$49,90 USD</p>
+      <p class="text-yellow-300 font-black text-4xl" style="font-family:'Playfair Display',serif;">Solo $8,90 USD hoy 🎉</p>
+      <p class="text-green-300 text-sm mt-1" style="font-family:'Montserrat',sans-serif;">¡Ahorras 82% hoy!</p>
     </div>
   </div>
 </section>
+
+<hr class="gold-divider" />
 
 
 <!-- ══════════════════════════════════════════
      7 · PRICING
 ══════════════════════════════════════════ -->
-<section id="pricing" class="py-14 px-4 bg-gradient-to-br from-green-50 to-white fade-up">
+<section id="pricing" class="py-14 px-4 fade-up" style="background:linear-gradient(135deg,#f0fdf4,#faf7f0);">
   <div class="max-w-2xl mx-auto">
     <div class="text-center mb-10">
-      <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">🔥 Oferta por tiempo limitado</span>
-      <h2 class="text-2xl md:text-3xl font-black text-gray-800">¡Tu Guía Completa + 3 Bonos Exclusivos!</h2>
-      <p class="text-gray-500 text-sm mt-2">Garantía incondicional de 7 días · Sin preguntas</p>
+      <span class="badge-pill bg-red-100 text-red-700 mb-3">🔥 Oferta por tiempo limitado</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark">¡Tu Guía Completa + 3 Bonos Exclusivos!</h2>
+      <p class="text-bark-l text-sm mt-2" style="font-family:'Montserrat',sans-serif;">Garantía incondicional de 7 días · Sin preguntas</p>
     </div>
 
-    <!-- ── Paquete Completo — OFERTA ÚNICA ── -->
-    <div class="bg-gradient-to-br from-green-600 to-green-800 text-white rounded-3xl p-7 shadow-2xl relative overflow-hidden">
+    <!-- Pricing card -->
+    <div class="pricing-glow rounded-3xl p-7 shadow-2xl relative overflow-hidden" style="background:linear-gradient(135deg,#1a4731 0%,#0d2e1c 100%);">
       <div class="absolute top-0 right-0">
-        <div class="bg-yellow-400 text-gray-900 text-xs font-black px-4 py-1 rounded-bl-2xl">⭐ MÁS VENDIDO</div>
+        <div class="bg-gold text-forest text-xs font-black px-4 py-1 rounded-bl-2xl" style="font-family:'Montserrat',sans-serif;">⭐ MÁS VENDIDO</div>
       </div>
 
       <div class="text-center mb-5 mt-2">
-        <h3 class="font-black text-2xl mb-1">Paquete Completo</h3>
-        <p class="text-green-200 text-sm">Todo lo que necesitas para dominar las conservas artesanales</p>
+        <h3 class="font-black text-2xl text-white mb-1" style="font-family:'Playfair Display',serif;">Paquete Completo</h3>
+        <p class="text-green-200 text-sm" style="font-family:'Montserrat',sans-serif;">Todo lo que necesitas para dominar las conservas artesanales</p>
       </div>
 
       <div class="grid sm:grid-cols-2 gap-2 mb-7">
-        <div class="flex items-center gap-2 text-sm text-green-100"><span class="text-yellow-300 font-bold flex-shrink-0">✔</span> Guía '101 Recetas de Conservas Artesanales'</div>
-        <div class="flex items-center gap-2 text-sm text-green-100"><span class="text-yellow-300 font-bold flex-shrink-0">✔</span> +101 recetas ilustradas paso a paso</div>
-        <div class="flex items-start gap-2 text-sm text-green-100 bg-white/10 rounded-xl px-3 py-2"><span class="text-yellow-300 font-bold flex-shrink-0 mt-0.5">✔</span><span><strong>Bono 1:</strong> Guía de Especias <span class="text-yellow-200 text-xs">(valor $27)</span></span></div>
-        <div class="flex items-start gap-2 text-sm text-green-100 bg-white/10 rounded-xl px-3 py-2"><span class="text-yellow-300 font-bold flex-shrink-0 mt-0.5">✔</span><span><strong>Bono 2:</strong> Menú Inteligente 4 semanas <span class="text-yellow-200 text-xs">(valor $17)</span></span></div>
-        <div class="flex items-start gap-2 text-sm text-green-100 bg-white/10 rounded-xl px-3 py-2 sm:col-span-2"><span class="text-yellow-300 font-bold flex-shrink-0 mt-0.5">✔</span><span><strong>Bono 3:</strong> Guía de Esterilización Profesional <span class="text-yellow-200 text-xs">(valor $37)</span></span></div>
-        <div class="flex items-center gap-2 text-sm text-green-100"><span class="text-yellow-300 font-bold flex-shrink-0">✔</span> Acceso de por vida + soporte prioritario</div>
-        <div class="flex items-center gap-2 text-sm text-green-100"><span class="text-yellow-300 font-bold flex-shrink-0">✔</span> Actualizaciones mensuales con nuevas recetas</div>
+        <div class="flex items-center gap-2 text-sm text-green-100" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0">✔</span> Guía '101 Recetas de Conservas Artesanales'</div>
+        <div class="flex items-center gap-2 text-sm text-green-100" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0">✔</span> +101 recetas ilustradas paso a paso</div>
+        <div class="flex items-start gap-2 text-sm text-green-100 bg-white/10 rounded-xl px-3 py-2" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0 mt-0.5">✔</span><span><strong>Bono 1:</strong> Guía de Especias <span class="text-yellow-200 text-xs">(valor $27)</span></span></div>
+        <div class="flex items-start gap-2 text-sm text-green-100 bg-white/10 rounded-xl px-3 py-2" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0 mt-0.5">✔</span><span><strong>Bono 2:</strong> Menú Inteligente 4 semanas <span class="text-yellow-200 text-xs">(valor $17)</span></span></div>
+        <div class="flex items-start gap-2 text-sm text-green-100 bg-white/10 rounded-xl px-3 py-2 sm:col-span-2" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0 mt-0.5">✔</span><span><strong>Bono 3:</strong> Guía Esterilización Profesional 🔒 <span class="text-yellow-200 text-xs">(valor $37)</span></span></div>
+        <div class="flex items-center gap-2 text-sm text-green-100" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0">✔</span> Acceso de por vida + soporte prioritario</div>
+        <div class="flex items-center gap-2 text-sm text-green-100" style="font-family:'Montserrat',sans-serif;"><span class="text-gold font-bold flex-shrink-0">✔</span> Actualizaciones mensuales con nuevas recetas</div>
       </div>
 
       <div class="text-center mb-6">
-        <p class="text-green-300 text-sm line-through">Precio regular: $49,90 USD</p>
-        <p class="text-yellow-300 font-black text-5xl md:text-6xl leading-none my-2">$8,90 USD</p>
-        <p class="text-green-200 text-sm">¡Ahorra 82% hoy · Acceso inmediato · Garantía 7 días!</p>
+        <p class="text-green-300 text-sm line-through" style="font-family:'Montserrat',sans-serif;">Precio regular: $49,90 USD</p>
+        <p class="text-gold font-black text-5xl md:text-6xl leading-none my-2" style="font-family:'Playfair Display',serif;">$8,90 USD</p>
+        <p class="text-green-200 text-sm" style="font-family:'Montserrat',sans-serif;">¡Ahorra 82% hoy · Acceso inmediato · Garantía 7 días!</p>
       </div>
 
       <a href="https://pay.hotmart.com/N105440462S?checkoutMode=10" target="_blank" rel="noopener"
-         class="cta-pulse block text-center bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-6 rounded-full shadow-xl transition-all w-full text-xl mb-3">
-        ✨ ¡QUIERO VIVIR ESTA EXPERIENCIA POR $8,90!
+         class="cta-pulse btn-hover block text-center bg-gold text-forest font-black py-4 px-6 rounded-full shadow-xl w-full text-xl mb-3"
+         style="font-family:'Montserrat',sans-serif;">
+        🥒 ¡SÍ! QUIERO MIS CONSERVAS SEGURAS Y DELICIOSAS POR SOLO $8,90 USD
       </a>
-      <p class="text-center text-green-200 text-xs">🔒 Compra segura · Descarga en segundos · Garantía 7 días</p>
+      <p class="text-center text-green-200 text-xs" style="font-family:'Montserrat',sans-serif;">🔒 Compra segura · Descarga en segundos · Garantía 7 días</p>
     </div>
 
     <!-- Trust row -->
-    <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-gray-500">
+    <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-bark-l" style="font-family:'Montserrat',sans-serif;">
       <div class="flex items-center gap-2"><span class="text-xl">🔒</span> Compra Segura</div>
       <div class="flex items-center gap-2"><span class="text-xl">💳</span> Principales Tarjetas</div>
       <div class="flex items-center gap-2"><span class="text-xl">⚡</span> Acceso Inmediato</div>
@@ -752,79 +844,126 @@
     <!-- Guarantee badge -->
     <div class="guarantee-badge mt-8 p-6 max-w-lg mx-auto text-center">
       <div class="text-4xl mb-2">🛡️</div>
-      <h4 class="font-black text-gray-800 text-base mb-2">Garantía Incondicional de 7 Días</h4>
-      <p class="text-gray-600 text-sm leading-relaxed">
+      <h4 class="font-black text-bark text-base mb-2" style="font-family:'Playfair Display',serif;">Garantía Incondicional de 7 Días</h4>
+      <p class="text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
         Si no estás 100% satisfecho con la Guía, te devolvemos el dinero completo dentro de los 7 días posteriores a la compra. Sin preguntas, sin complicaciones.
       </p>
     </div>
   </div>
 </section>
 
+<hr class="gold-divider" />
+
 
 <!-- ══════════════════════════════════════════
-     8 · TESTIMONIALS
+     8 · TESTIMONIALS CAROUSEL
 ══════════════════════════════════════════ -->
-<section class="py-14 px-4 bg-gray-50 fade-up">
+<section class="py-14 px-4 bg-cream fade-up">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
-      <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">Testimonios Reales</span>
-      <h2 class="text-2xl md:text-3xl font-black text-gray-800">Lo que dicen quienes ya lo tienen 💬</h2>
+      <span class="badge-pill bg-green-100 text-sea mb-3">Testimonios Reales</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark">Lo que Dicen Quienes ya Transformaron su Cocina 💬</h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Testimonial 1 -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-        <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
-        <p class="text-gray-700 text-sm leading-relaxed mb-4">
-          "¡Gente, intentaba hacer conservas y siempre quedaban blandas! Hice la receta de los encurtidos crujientes y quedaron ¡PERFECTOS! ¡Mi familia pidió más! 😂🥒"
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-sm">C</div>
-          <div>
-            <p class="font-semibold text-gray-800 text-sm">Camila del Cielo</p>
-            <p class="text-gray-400 text-xs">México · Compra verificada ✅</p>
+    <div class="relative">
+      <div class="carousel-wrap" id="testimonialsCarousel">
+        <div class="carousel-track" id="testimonialsTrack">
+
+          <!-- T1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-cream-d card-hover flex-shrink-0" style="width:320px; margin-right:20px; max-width:90vw;">
+            <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
+            <p class="text-bark text-sm leading-relaxed mb-4" style="font-family:'Montserrat',sans-serif;">
+              "¡Gente, intentaba hacer conservas y siempre quedaban blandas! Hice la receta de los encurtidos crujientes y quedaron ¡PERFECTOS! ¡Mi familia pidió más! 😂🥒"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sea flex items-center justify-center text-white font-bold text-sm" style="font-family:'Montserrat',sans-serif;">C</div>
+              <div>
+                <p class="font-semibold text-bark text-sm" style="font-family:'Montserrat',sans-serif;">Camila del Cielo</p>
+                <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">México · Compra verificada ✅</p>
+              </div>
+            </div>
           </div>
+
+          <!-- T2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-cream-d card-hover flex-shrink-0" style="width:320px; margin-right:20px; max-width:90vw;">
+            <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
+            <p class="text-bark text-sm leading-relaxed mb-4" style="font-family:'Montserrat',sans-serif;">
+              "¡Mi negocio de conservas caseras despegó! Las técnicas de esterilización y fermentación de la Guía son oro puro. ¡Ya vendí más en un mes que en 3 meses antes! 🙏💚"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-sm" style="font-family:'Montserrat',sans-serif;">J</div>
+              <div>
+                <p class="font-semibold text-bark text-sm" style="font-family:'Montserrat',sans-serif;">Juliana Santos</p>
+                <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Colombia · Compra verificada ✅</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- T3 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-cream-d card-hover flex-shrink-0" style="width:320px; margin-right:20px; max-width:90vw;">
+            <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
+            <p class="text-bark text-sm leading-relaxed mb-4" style="font-family:'Montserrat',sans-serif;">
+              "Compré por curiosidad y me sorprendió muchísimo. Las recetas son fáciles, las fotos son claras y los resultados son profesionales. ¡Vale mucho la pena! 👏✨"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm" style="font-family:'Montserrat',sans-serif;">R</div>
+              <div>
+                <p class="font-semibold text-bark text-sm" style="font-family:'Montserrat',sans-serif;">Roberto Lima</p>
+                <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Argentina · Compra verificada ✅</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- T4 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-cream-d card-hover flex-shrink-0" style="width:320px; margin-right:20px; max-width:90vw;">
+            <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
+            <p class="text-bark text-sm leading-relaxed mb-4" style="font-family:'Montserrat',sans-serif;">
+              "Nunca pensé que hacer conservas fuera tan sencillo. El Bono de Esterilización me dio total confianza — ya no tengo miedo de que se dañen. ¡Mi familia adora todo! 🏺❤️"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-sm" style="font-family:'Montserrat',sans-serif;">L</div>
+              <div>
+                <p class="font-semibold text-bark text-sm" style="font-family:'Montserrat',sans-serif;">Lucía Fernández</p>
+                <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Chile · Compra verificada ✅</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- T5 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-cream-d card-hover flex-shrink-0" style="width:320px; margin-right:20px; max-width:90vw;">
+            <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
+            <p class="text-bark text-sm leading-relaxed mb-4" style="font-family:'Montserrat',sans-serif;">
+              "La mermelada de tomate fue la primera que hice y todavía no puedo creer lo buena que quedó. Mis vecinas me piden frascos cada semana. ¡Mejor inversión de mi año! 🍅"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold text-sm" style="font-family:'Montserrat',sans-serif;">M</div>
+              <div>
+                <p class="font-semibold text-bark text-sm" style="font-family:'Montserrat',sans-serif;">Marcela Torres</p>
+                <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Perú · Compra verificada ✅</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Testimonial 2 -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-        <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
-        <p class="text-gray-700 text-sm leading-relaxed mb-4">
-          "¡Mi negocio de conservas caseras despegó! Las técnicas de esterilización y fermentación de la Guía son oro puro. ¡Ya vendí más en un mes que en 3 meses antes! 🙏💚"
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm">J</div>
-          <div>
-            <p class="font-semibold text-gray-800 text-sm">Juliana Santos</p>
-            <p class="text-gray-400 text-xs">Colombia · Compra verificada ✅</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-        <div class="stars text-base mb-3">⭐⭐⭐⭐⭐</div>
-        <p class="text-gray-700 text-sm leading-relaxed mb-4">
-          "Compré por curiosidad y me sorprendió muchísimo. Las recetas son fáciles, las fotos son claras y los resultados son profesionales. ¡Vale mucho la pena! 👏✨"
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">R</div>
-          <div>
-            <p class="font-semibold text-gray-800 text-sm">Roberto Lima</p>
-            <p class="text-gray-400 text-xs">Argentina · Compra verificada ✅</p>
-          </div>
-        </div>
+      <!-- Controls -->
+      <div class="flex items-center justify-between mt-4 px-1">
+        <button class="carousel-btn" id="testimonialsPrev" aria-label="Anterior">&#8592;</button>
+        <div class="flex gap-2" id="testimonialsDots"></div>
+        <button class="carousel-btn" id="testimonialsNext" aria-label="Siguiente">&#8594;</button>
       </div>
     </div>
 
     <div class="text-center mt-8">
-      <a href="#pricing" class="cta-pulse inline-block bg-orange-500 text-white font-black text-lg py-4 px-10 rounded-full shadow-xl">
+      <a href="#pricing" class="cta-pulse btn-hover inline-block bg-gold text-forest font-black text-lg py-4 px-10 rounded-full shadow-xl" style="font-family:'Montserrat',sans-serif;">
         ✨ ¡YO TAMBIÉN QUIERO SENTIR ESTO — $8,90!
       </a>
     </div>
   </div>
 </section>
+
+<hr class="gold-divider" />
 
 
 <!-- ══════════════════════════════════════════
@@ -833,40 +972,35 @@
 <section class="py-14 px-4 bg-white fade-up">
   <div class="max-w-4xl mx-auto">
     <div class="grid md:grid-cols-2 gap-10 items-center">
-      <!-- Author image -->
       <div class="flex justify-center">
-        <img
-          src="https://i.ibb.co/NgjWvhCg/expert-historia.jpg"
-          alt="Retrato de Ana Silva, especialista em saúde alimentar e autora do guia de conservas."
-          class="w-56 md:w-72 rounded-3xl object-cover shadow-xl"
-          loading="lazy"
-        />
+        <img src="https://i.ibb.co/NgjWvhCg/expert-historia.jpg"
+             alt="María Silva, especialista en conservas artesanales gourmet y creadora del Método Conserva Perfecta."
+             class="w-56 md:w-72 rounded-3xl object-cover shadow-xl"
+             loading="lazy" decoding="async" />
       </div>
 
-      <!-- Bio -->
       <div>
-        <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4">Sobre la Autora</span>
-        <h2 class="text-2xl md:text-3xl font-black text-gray-800 mb-4">¡Hola, soy <span class="text-green-600">María Silva!</span> 👋</h2>
-        <div class="space-y-3 text-gray-600 text-sm leading-relaxed">
+        <span class="badge-pill bg-green-100 text-sea mb-4 inline-block">Conoce a la Experta Detrás del Método</span>
+        <h2 class="text-2xl md:text-3xl font-black text-bark mb-4">¡Hola, soy <span class="text-sea">María Silva!</span> 👋</h2>
+        <div class="space-y-3 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
           <p>Desde la infancia, siempre me encantó cocinar y experimentar nuevos sabores. Pero fue cuando empecé a hacer conservas artesanales que descubrí mi verdadera pasión.</p>
-          <p>Después de años probando técnicas, combinaciones de especias y métodos de conservación, creé un sistema que <strong class="text-gray-800">funciona perfectamente</strong> para cualquier persona, sin importar su nivel de experiencia.</p>
-          <p>Y así nació <strong class="text-green-600">'101 Recetas de Conservas Artesanales'</strong>, de mi necesidad de compartir este conocimiento con quienes quieren dominar este arte milenario.</p>
-          <p>Hoy, <strong class="text-gray-800">cientos de personas</strong> están creando conservas profesionales en sus cocinas, ¡y ese es mi mayor premio!</p>
+          <p>Después de años probando técnicas, combinaciones de especias y métodos de conservación, creé un sistema que <strong class="text-bark">funciona perfectamente</strong> para cualquier persona, sin importar su nivel de experiencia.</p>
+          <p>Y así nació <strong class="text-sea">'101 Recetas de Conservas Artesanales'</strong>, de mi necesidad de compartir este conocimiento con quienes quieren dominar este arte milenario.</p>
+          <p>Hoy, <strong class="text-bark">cientos de personas</strong> están creando conservas profesionales en sus cocinas, ¡y ese es mi mayor premio!</p>
         </div>
 
-        <!-- Stats -->
         <div class="flex gap-6 mt-6">
           <div class="text-center">
-            <p class="font-black text-green-600 text-2xl">+500</p>
-            <p class="text-gray-500 text-xs">Alumnos</p>
+            <p class="font-black text-sea text-2xl" style="font-family:'Playfair Display',serif;">+500</p>
+            <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Alumnos</p>
           </div>
           <div class="text-center">
-            <p class="font-black text-green-600 text-2xl">101</p>
-            <p class="text-gray-500 text-xs">Recetas</p>
+            <p class="font-black text-sea text-2xl" style="font-family:'Playfair Display',serif;">101</p>
+            <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Recetas</p>
           </div>
           <div class="text-center">
-            <p class="font-black text-green-600 text-2xl">5★</p>
-            <p class="text-gray-500 text-xs">Calificación</p>
+            <p class="font-black text-sea text-2xl" style="font-family:'Playfair Display',serif;">5★</p>
+            <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">Calificación</p>
           </div>
         </div>
       </div>
@@ -874,118 +1008,112 @@
   </div>
 </section>
 
+<hr class="gold-divider" />
+
 
 <!-- ══════════════════════════════════════════
      10 · FAQ ACCORDION
 ══════════════════════════════════════════ -->
-<section class="py-14 px-4 bg-gray-50 fade-up">
+<section class="py-14 px-4 bg-cream fade-up">
   <div class="max-w-3xl mx-auto">
     <div class="text-center mb-10">
-      <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">Preguntas Frecuentes</span>
-      <h2 class="text-2xl md:text-3xl font-black text-gray-800">¿Tienes dudas? ¡Las respondemos! ❓</h2>
+      <span class="badge-pill bg-blue-100 text-blue-700 mb-3">Preguntas Frecuentes</span>
+      <h2 class="text-2xl md:text-3xl font-black text-bark">¿Tienes dudas? ¡Las respondemos! ❓</h2>
     </div>
 
     <div class="space-y-3" id="faq">
 
-      <!-- Q1 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q1">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q1" style="font-family:'Montserrat',sans-serif;">
           <span>¿Cómo recibiré el material?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q1">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             Recibirás un enlace de descarga vía correo electrónico inmediatamente después de la compra. El acceso es de por vida y puedes descargarlo cuantas veces quieras.
           </p>
         </div>
       </div>
 
-      <!-- Q2 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q2">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q2" style="font-family:'Montserrat',sans-serif;">
           <span>No sé cocinar, ¿podré hacerlo?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q2">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             ¡Claro que sí! Todas las recetas son paso a paso, con fotos ilustrativas. Incluso los principiantes pueden hacer conservas profesionales siguiendo las instrucciones de la Guía.
           </p>
         </div>
       </div>
 
-      <!-- Q3 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q3">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q3" style="font-family:'Montserrat',sans-serif;">
           <span>¿Las recetas usan ingredientes caros?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q3">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             ¡No! Todos los ingredientes son fáciles de encontrar en supermercados comunes de toda Latinoamérica. El enfoque es usar ingredientes accesibles para crear resultados gourmet.
           </p>
         </div>
       </div>
 
-      <!-- Q4 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q4">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q4" style="font-family:'Montserrat',sans-serif;">
           <span>Soy vegetariano/a o vegano/a, ¿me sirve?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q4">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             ¡Perfecto para ti! Más de 70 recetas son 100% vegetarianas, y muchas son veganas. Tendrás opciones variadas y deliciosas para elegir todos los días.
           </p>
         </div>
       </div>
 
-      <!-- Q5 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q5">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q5" style="font-family:'Montserrat',sans-serif;">
           <span>¿Por cuánto tiempo tendré acceso?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q5">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
-            ¡Tendrás acceso de por vida! Una vez comprado, el material es tuyo para siempre. Además, con el Paquete Completo recibirás actualizaciones mensuales con nuevas recetas sin costo adicional.
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
+            ¡Tendrás acceso de por vida! Una vez comprado, el material es tuyo para siempre. Además, recibirás actualizaciones mensuales con nuevas recetas sin costo adicional.
           </p>
         </div>
       </div>
 
-      <!-- Q6 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q6">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q6" style="font-family:'Montserrat',sans-serif;">
           <span>¿Puedo imprimir el material?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q6">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             ¡Sí! Puedes imprimirlo cuantas veces quieras para tu comodidad. A muchas personas les gusta imprimir las recetas para usarlas directamente en la cocina.
           </p>
         </div>
       </div>
 
-      <!-- Q8 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q8">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q8" style="font-family:'Montserrat',sans-serif;">
           <span>¿Son realmente seguras las conservas hechas con esta guía? ¿Hay riesgo para la salud?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q8">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             ¡Absolutamente! Nuestra guía se enfoca en el Método de Conservación Perfecta, que incluye técnicas de esterilización profesional e higiene rigurosa. Todas las recetas han sido testadas para garantizar que tus conservas sean 100% seguras, libres de riesgos y aptas para el consumo prolongado. Tu salud y la de tu familia son nuestra prioridad.
           </p>
         </div>
       </div>
 
-      <!-- Q7 -->
-      <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 hover:text-green-600 transition-colors text-sm md:text-base" data-acc="q7">
+      <div class="acc-item bg-white rounded-2xl border border-cream-d shadow-sm overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-bark hover:text-sea transition-colors text-sm md:text-base" data-acc="q7" style="font-family:'Montserrat',sans-serif;">
           <span>¿Cuál es la garantía?</span>
-          <svg class="acc-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="acc-icon w-5 h-5 text-bark-l flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-body" id="q7">
-          <p class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+          <p class="px-6 pb-5 text-bark-l text-sm leading-relaxed" style="font-family:'Montserrat',sans-serif;">
             Ofrecemos garantía incondicional de 7 días. Si no estás satisfecho/a con el material por cualquier motivo, te devolvemos el 100% de tu dinero, sin preguntas ni complicaciones.
           </p>
         </div>
@@ -994,7 +1122,7 @@
     </div>
 
     <div class="text-center mt-10">
-      <a href="#pricing" class="cta-pulse inline-block bg-green-600 text-white font-black text-lg py-4 px-10 rounded-full shadow-xl">
+      <a href="#pricing" class="cta-pulse btn-hover inline-block bg-sea text-white font-black text-lg py-4 px-10 rounded-full shadow-xl" style="font-family:'Montserrat',sans-serif;">
         ✨ ¡QUIERO CREAR CONSERVAS QUE IMPRESIONEN!
       </a>
     </div>
@@ -1005,27 +1133,37 @@
 <!-- ══════════════════════════════════════════
      11 · FOOTER
 ══════════════════════════════════════════ -->
-<footer class="bg-gray-900 text-gray-400 py-8 px-4">
+<footer style="background:#0d2e1c;" class="text-green-300 py-8 px-4">
   <div class="max-w-4xl mx-auto text-center">
     <div class="text-3xl mb-3">🫙</div>
-    <p class="font-bold text-white text-base mb-1">101 Recetas de Conservas Artesanales</p>
-    <p class="text-sm mb-5">La guía definitiva para crear conservas artesanales profesionales para toda Latinoamérica.</p>
+    <p class="font-bold text-white text-base mb-1" style="font-family:'Playfair Display',serif;">101 Recetas de Conservas Artesanales</p>
+    <p class="text-sm mb-5" style="font-family:'Montserrat',sans-serif;">La guía definitiva para crear conservas artesanales gourmet para toda Latinoamérica.</p>
 
-    <div class="flex flex-wrap justify-center gap-4 text-xs mb-5">
+    <div class="flex flex-wrap justify-center gap-4 text-xs mb-5" style="font-family:'Montserrat',sans-serif;">
       <a href="#" class="hover:text-white transition-colors">Políticas de Privacidad</a>
-      <span class="text-gray-600">·</span>
+      <span class="text-green-700">·</span>
       <a href="#" class="hover:text-white transition-colors">Términos de Uso</a>
     </div>
 
-    <p class="text-xs text-gray-600">© 2025 Conservas Artesanales LATAM. Todos los derechos reservados.</p>
-    <p class="text-xs text-gray-700 mt-1">Este producto es una Guía digital. Los resultados pueden variar según la dedicación de cada persona.</p>
+    <p class="text-xs text-green-700" style="font-family:'Montserrat',sans-serif;">© 2025 Conservas Artesanales LATAM. Todos los derechos reservados.</p>
+    <p class="text-xs text-green-800 mt-1" style="font-family:'Montserrat',sans-serif;">Este producto es una Guía digital. Los resultados pueden variar según la dedicación de cada persona.</p>
   </div>
 </footer>
 
 
 <!-- ══════════════════════════════════════════
-     STICKY MOBILE CTA
+     SOCIAL PROOF POPUP
 ══════════════════════════════════════════ -->
+<div id="sp-popup" role="status" aria-live="polite">
+  <div class="flex items-start gap-3">
+    <div id="sp-avatar" class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="font-family:'Montserrat',sans-serif;"></div>
+    <div>
+      <p id="sp-name" class="font-bold text-bark text-xs" style="font-family:'Montserrat',sans-serif;"></p>
+      <p class="text-bark-l text-xs" style="font-family:'Montserrat',sans-serif;">acaba de comprar el <strong>Paquete Completo</strong> 🥒</p>
+      <p id="sp-time" class="text-bark-l text-xs mt-0.5" style="font-family:'Montserrat',sans-serif;"></p>
+    </div>
+  </div>
+</div>
 
 
 <!-- ══════════════════════════════════════════
@@ -1035,82 +1173,125 @@
 /* ── Countdown timer ── */
 (function () {
   function pad(n) { return String(n).padStart(2, '0'); }
-
-  function updateCountdown() {
-    const now = new Date();
-    const end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
-    const diff = Math.max(0, end - now);
-
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-
-    const el = document.getElementById('countdown');
+  function update() {
+    var now = new Date(), end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+    var diff = Math.max(0, end - now);
+    var h = Math.floor(diff / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+    var el = document.getElementById('countdown');
     if (el) el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
   }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+  update(); setInterval(update, 1000);
 })();
 
 
 /* ── FAQ Accordion ── */
 document.querySelectorAll('.acc-trigger').forEach(function (btn) {
   btn.addEventListener('click', function () {
-    var id = btn.getAttribute('data-acc');
-    var body = document.getElementById(id);
-    var icon = btn.querySelector('.acc-icon');
+    var id = btn.getAttribute('data-acc'), body = document.getElementById(id), icon = btn.querySelector('.acc-icon');
     var isOpen = body.classList.contains('open');
-
-    // close all
     document.querySelectorAll('.acc-body').forEach(function (b) { b.classList.remove('open'); });
     document.querySelectorAll('.acc-icon').forEach(function (i) { i.classList.remove('open'); });
-
-    // toggle clicked
-    if (!isOpen) {
-      body.classList.add('open');
-      icon.classList.add('open');
-    }
+    if (!isOpen) { body.classList.add('open'); icon.classList.add('open'); }
   });
 });
 
 
 /* ── Scroll fade-up animation ── */
 (function () {
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
   }, { threshold: 0, rootMargin: '400px 0px' });
-
-  document.querySelectorAll('.fade-up').forEach(function (el) {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.fade-up').forEach(function (el) { obs.observe(el); });
 })();
 
-/* ── Native lazy-load polyfill with early threshold ── */
+
+/* ── Lazy-load with early threshold ── */
 (function () {
-  if (!('loading' in HTMLImageElement.prototype)) return;
-  var imgObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var img = entry.target;
-        if (img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; }
-        imgObserver.unobserve(img);
-      }
+  var imgObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { var img = e.target; img.decoding = 'async'; imgObs.unobserve(img); }
     });
   }, { rootMargin: '500px 0px', threshold: 0 });
-
-  document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
-    img.decoding = 'async';
-    imgObserver.observe(img);
-  });
+  document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { imgObs.observe(img); });
 })();
 
 
+/* ── Carousel factory ── */
+function makeCarousel(trackId, prevId, nextId, dotsId, cardWidth, gap) {
+  var track = document.getElementById(trackId);
+  var dots  = document.getElementById(dotsId);
+  if (!track) return;
+  var cards = track.children;
+  var total = cards.length;
+  var step  = cardWidth + gap;
+  var current = 0;
+
+  /* create dots */
+  for (var i = 0; i < total; i++) {
+    var d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Ir al item ' + (i + 1));
+    (function(idx){ d.addEventListener('click', function(){ goTo(idx); }); })(i);
+    dots.appendChild(d);
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, total - 1));
+    track.style.transform = 'translateX(-' + (current * step) + 'px)';
+    dots.querySelectorAll('.carousel-dot').forEach(function(d, i){ d.classList.toggle('active', i === current); });
+  }
+
+  document.getElementById(prevId).addEventListener('click', function(){ goTo(current - 1); });
+  document.getElementById(nextId).addEventListener('click', function(){ goTo(current + 1); });
+
+  /* auto-advance */
+  var timer = setInterval(function(){ goTo((current + 1) % total); }, 4500);
+  track.parentElement.addEventListener('mouseenter', function(){ clearInterval(timer); });
+  track.parentElement.addEventListener('mouseleave', function(){ timer = setInterval(function(){ goTo((current + 1) % total); }, 4500); });
+
+  /* touch/swipe */
+  var startX = 0;
+  track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+  }, {passive:true});
+}
+
+makeCarousel('recipesTrack',      'recipesPrev',      'recipesNext',      'recipesDots',      200, 16);
+makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testimonialsNext', 'testimonialsDots', 320, 20);
+
+
+/* ── Social proof popups ── */
+(function () {
+  var people = [
+    { name: 'Valentina G.', city: 'Ciudad de México', color: '#2E8B57', initial: 'V', mins: '2 minutos' },
+    { name: 'Sofía R.',     city: 'Bogotá',           color: '#c9a227', initial: 'S', mins: '5 minutos' },
+    { name: 'Camila F.',    city: 'Buenos Aires',     color: '#e07b39', initial: 'C', mins: '8 minutos' },
+    { name: 'Daniela M.',   city: 'Santiago',         color: '#6d5a9e', initial: 'D', mins: '12 minutos' },
+    { name: 'Paola T.',     city: 'Lima',             color: '#2E8B57', initial: 'P', mins: '15 minutos' },
+    { name: 'Mariana L.',   city: 'Guadalajara',      color: '#c0392b', initial: 'M', mins: '18 minutos' },
+    { name: 'Andrea V.',    city: 'Medellín',         color: '#1a7a9e', initial: 'A', mins: '22 minutos' },
+    { name: 'Isabella N.',  city: 'Montevideo',       color: '#c9a227', initial: 'I', mins: '25 minutos' },
+  ];
+  var popup = document.getElementById('sp-popup');
+  var idx = 0;
+
+  function show() {
+    var p = people[idx % people.length]; idx++;
+    document.getElementById('sp-avatar').style.background = p.color;
+    document.getElementById('sp-avatar').textContent = p.initial;
+    document.getElementById('sp-name').textContent = p.name + ' de ' + p.city;
+    document.getElementById('sp-time').textContent = 'hace ' + p.mins;
+    popup.classList.add('show');
+    setTimeout(function(){ popup.classList.remove('show'); }, 4000);
+  }
+
+  setTimeout(function(){
+    show();
+    setInterval(function(){ show(); }, 12000);
+  }, 6000);
+})();
 </script>
 
 </body>
