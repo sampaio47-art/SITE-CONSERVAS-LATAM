@@ -97,6 +97,8 @@
       background: radial-gradient(ellipse at 60% 40%, rgba(201,162,39,.12) 0%, transparent 70%);
       pointer-events:none;
     }
+    .hero-orb { position:absolute; border-radius:50%; pointer-events:none; filter:blur(90px); opacity:.13; }
+    @keyframes orbFloat { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(28px,-20px) scale(1.05)} }
 
     /* ── Step circle ── */
     .step-circle {
@@ -143,6 +145,13 @@
     /* ── Carousel ── */
     .carousel-track { display:flex; transition:transform 1.2s ease-in-out; will-change:transform; }
     .carousel-wrap { overflow:hidden; }
+    @media (max-width: 768px) {
+      .carousel-wrap { width:100%; }
+      #recipesTrack > *, #testimonialsTrack > * {
+        width:100% !important; max-width:100% !important; margin-right:0 !important;
+        box-sizing:border-box;
+      }
+    }
     @keyframes carouselPulse {
       0%,100% { transform:scale(1);   box-shadow:0 4px 12px rgba(0,0,0,.2); }
       50%      { transform:scale(1.1); box-shadow:0 6px 20px rgba(201,162,39,.45); }
@@ -238,7 +247,9 @@
      1 · HERO SECTION
 ══════════════════════════════════════════ -->
 <section class="hero-bg text-white pt-10 pb-14 px-4">
-  <div class="max-w-xl mx-auto text-center">
+  <div class="hero-orb" style="width:360px;height:360px;background:#c9a227;top:-90px;right:-70px;animation:orbFloat 9s ease-in-out infinite;"></div>
+  <div class="hero-orb" style="width:240px;height:240px;background:#2E8B57;bottom:-50px;left:-60px;animation:orbFloat 13s ease-in-out infinite reverse;"></div>
+  <div class="max-w-xl mx-auto text-center" style="position:relative;z-index:1;">
 
     <!-- H1 -->
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-5" style="font-family:'Playfair Display',serif; text-shadow:0 2px 12px rgba(0,0,0,.4);">
@@ -1152,6 +1163,16 @@
 <!-- ══════════════════════════════════════════
      SOCIAL PROOF POPUP
 ══════════════════════════════════════════ -->
+<!-- ── Floating sticky CTA ── -->
+<div id="float-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;padding:10px 14px 14px;background:linear-gradient(135deg,#0d2e1c,#1a4731);box-shadow:0 -4px 24px rgba(0,0,0,.45);border-top:2px solid #c9a227;">
+  <a href="https://pay.hotmart.com/N105440462S?checkoutMode=10" target="_blank" rel="noopener"
+     class="cta-pulse btn-hover block text-center bg-gold text-forest font-black py-3 px-4 rounded-full w-full text-sm"
+     style="font-family:'Montserrat',sans-serif;">
+    🥒 ¡QUIERO MIS CONSERVAS POR SOLO $8,90 USD! →
+  </a>
+  <button id="float-cta-close" aria-label="Cerrar" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.55);font-size:22px;cursor:pointer;line-height:1;padding:4px 8px;">×</button>
+</div>
+
 <div id="sp-popup" role="status" aria-live="polite">
   <div class="flex items-start gap-3">
     <div id="sp-avatar" class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="font-family:'Montserrat',sans-serif;"></div>
@@ -1233,9 +1254,14 @@ function makeCarousel(trackId, prevId, nextId, dotsId, cardWidth, gap) {
     dots.appendChild(d);
   }
 
+  function dynStep() {
+    var w = track.children[0] ? track.children[0].offsetWidth : cardWidth;
+    return w + (window.innerWidth <= 768 ? 0 : gap);
+  }
+
   function goTo(idx) {
     current = Math.max(0, Math.min(idx, total - 1));
-    track.style.transform = 'translateX(-' + (current * step) + 'px)';
+    track.style.transform = 'translateX(-' + (current * dynStep()) + 'px)';
     dots.querySelectorAll('.carousel-dot').forEach(function(d, i){ d.classList.toggle('active', i === current); });
   }
 
@@ -1262,6 +1288,8 @@ function makeCarousel(trackId, prevId, nextId, dotsId, cardWidth, gap) {
     if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
   }, {passive:true});
 
+  window.addEventListener('resize', function(){ goTo(current); }, {passive:true});
+
   return { start: startAutoplay, stop: stopAutoplay, wrap: track.parentElement };
 }
 
@@ -1275,26 +1303,35 @@ var testimonialsC = makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testi
     entries.forEach(function(entry) {
       if (entry.isIntersecting) { c.start(); } else { c.stop(); }
     });
-  }, { threshold: 0.3 }).observe(c.wrap);
+  }, { threshold: 0.5 }).observe(c.wrap);
 });
 
 
 /* ── Social proof popups ── */
 (function () {
   var notifications = [
-    { msg: '¡Sofía de Buenos Aires acaba de comprar el Paquete Completo!',       color: '#c9a227', initial: 'S' },
-    { msg: '¡Juan de Ciudad de México ya está creando sus conservas!',           color: '#2E8B57', initial: 'J' },
-    { msg: '¡María de Bogotá adquirió el método secreto!',                       color: '#e07b39', initial: 'M' },
-    { msg: '¡Pedro de Lima garantizó su acceso a las 100+ recetas!',             color: '#1a7a9e', initial: 'P' },
-    { msg: '¡Valentina de Santiago acaba de unirse al Paquete Completo!',        color: '#6d5a9e', initial: 'V' },
-    { msg: '¡Camila de Guadalajara ya tiene sus 3 Bonos Exclusivos!',            color: '#c0392b', initial: 'C' },
-    { msg: '¡Lucía de Montevideo está transformando su cocina ahora mismo!',     color: '#2E8B57', initial: 'L' },
-    { msg: '¡Andrea de Medellín garantizó conservas 100% seguras!',             color: '#c9a227', initial: 'A' },
-    { msg: '¡Daniela de Quito acaba de descargar la Guía Completa!',            color: '#e07b39', initial: 'D' },
-    { msg: '¡Carlos de Asunción compró el Paquete hace menos de 5 minutos!',    color: '#1a4731', initial: 'C' },
+    { msg: '¡Sofía de Buenos Aires acaba de comprar el Paquete Completo!',      color: '#c9a227', initial: 'S' },
+    { msg: '¡Juan de Ciudad de México ya está creando sus conservas!',          color: '#2E8B57', initial: 'J' },
+    { msg: '¡María de Bogotá adquirió el método secreto!',                      color: '#e07b39', initial: 'M' },
+    { msg: '¡Pedro de Lima garantizó su acceso a las 100+ recetas!',            color: '#1a7a9e', initial: 'P' },
+    { msg: '¡Ana de Santiago está aprendiendo a hacer conservas seguras!',      color: '#6d5a9e', initial: 'A' },
+    { msg: '¡Carlos de Guadalajara compró la guía definitiva!',                 color: '#c0392b', initial: 'C' },
+    { msg: '¡Laura de Medellín ya tiene sus bonos exclusivos!',                 color: '#2E8B57', initial: 'L' },
+    { msg: '¡Diego de Monterrey está transformando su cocina!',                 color: '#c9a227', initial: 'D' },
+    { msg: '¡Valentina de Quito acaba de empezar su aventura culinaria!',       color: '#e07b39', initial: 'V' },
+    { msg: '¡Ricardo de Cali adquirió el Paquete Completo!',                    color: '#1a4731', initial: 'R' },
+    { msg: '¡Gabriela de Puebla ya tiene sus recetas artesanales!',             color: '#c9a227', initial: 'G' },
+    { msg: '¡Fernando de Guayaquil está listo para crear delicias!',            color: '#2E8B57', initial: 'F' },
+    { msg: '¡Isabella de Rosario compró la guía de esterilización!',            color: '#6d5a9e', initial: 'I' },
+    { msg: '¡Manuel de Barranquilla ya tiene el menú inteligente!',             color: '#1a7a9e', initial: 'M' },
+    { msg: '¡Camila de Córdoba está haciendo conservas que duran años!',        color: '#c0392b', initial: 'C' },
   ];
   var popup = document.getElementById('sp-popup');
   var idx = Math.floor(Math.random() * notifications.length);
+
+  function scheduleNext() {
+    setTimeout(show, 8000 + Math.floor(Math.random() * 5000));
+  }
 
   function show() {
     var n = notifications[idx % notifications.length]; idx++;
@@ -1303,13 +1340,25 @@ var testimonialsC = makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testi
     document.getElementById('sp-name').textContent = n.msg;
     document.getElementById('sp-time').textContent = '';
     popup.classList.add('show');
-    setTimeout(function(){ popup.classList.remove('show'); }, 3500);
+    setTimeout(function() { popup.classList.remove('show'); scheduleNext(); }, 4000);
   }
 
-  setTimeout(function(){
-    show();
-    setInterval(function(){ show(); }, 10000);
-  }, 5000);
+  setTimeout(show, 5000);
+})();
+
+
+/* ── Floating sticky CTA ── */
+(function() {
+  var floatEl = document.getElementById('float-cta');
+  var hero = document.querySelector('.hero-bg');
+  if (!floatEl || !hero) return;
+  var dismissed = false;
+  document.getElementById('float-cta-close').addEventListener('click', function() {
+    dismissed = true; floatEl.style.display = 'none';
+  });
+  new IntersectionObserver(function(entries) {
+    if (!dismissed) floatEl.style.display = entries[0].isIntersecting ? 'none' : 'block';
+  }, { threshold: 0 }).observe(hero);
 })();
 </script>
 
