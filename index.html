@@ -141,7 +141,7 @@
     .seal-pop { animation: sealPop .55s ease both; }
 
     /* ── Carousel ── */
-    .carousel-track { display:flex; transition:transform .4s cubic-bezier(.25,.8,.25,1); will-change:transform; }
+    .carousel-track { display:flex; transition:transform 1.2s ease-in-out; will-change:transform; }
     .carousel-wrap { overflow:hidden; }
     @keyframes carouselPulse {
       0%,100% { transform:scale(1);   box-shadow:0 4px 12px rgba(0,0,0,.2); }
@@ -1218,11 +1218,11 @@ document.querySelectorAll('.acc-trigger').forEach(function (btn) {
 function makeCarousel(trackId, prevId, nextId, dotsId, cardWidth, gap) {
   var track = document.getElementById(trackId);
   var dots  = document.getElementById(dotsId);
-  if (!track) return;
-  var cards = track.children;
-  var total = cards.length;
+  if (!track) return { start: function(){}, stop: function(){}, wrap: null };
+  var total = track.children.length;
   var step  = cardWidth + gap;
   var current = 0;
+  var timer = null;
 
   /* create dots */
   for (var i = 0; i < total; i++) {
@@ -1242,10 +1242,17 @@ function makeCarousel(trackId, prevId, nextId, dotsId, cardWidth, gap) {
   document.getElementById(prevId).addEventListener('click', function(){ goTo(current - 1); });
   document.getElementById(nextId).addEventListener('click', function(){ goTo(current + 1); });
 
-  /* auto-advance */
-  var timer = setInterval(function(){ goTo((current + 1) % total); }, 4500);
-  track.parentElement.addEventListener('mouseenter', function(){ clearInterval(timer); });
-  track.parentElement.addEventListener('mouseleave', function(){ timer = setInterval(function(){ goTo((current + 1) % total); }, 4500); });
+  function startAutoplay() {
+    if (timer) return;
+    timer = setInterval(function(){ goTo((current + 1) % total); }, 5000);
+  }
+  function stopAutoplay() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  track.parentElement.addEventListener('mouseenter', stopAutoplay);
+  track.parentElement.addEventListener('mouseleave', startAutoplay);
 
   /* touch/swipe */
   var startX = 0;
@@ -1254,10 +1261,22 @@ function makeCarousel(trackId, prevId, nextId, dotsId, cardWidth, gap) {
     var dx = e.changedTouches[0].clientX - startX;
     if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
   }, {passive:true});
+
+  return { start: startAutoplay, stop: stopAutoplay, wrap: track.parentElement };
 }
 
-makeCarousel('recipesTrack',      'recipesPrev',      'recipesNext',      'recipesDots',      200, 16);
-makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testimonialsNext', 'testimonialsDots', 320, 20);
+var recipesC      = makeCarousel('recipesTrack',      'recipesPrev',      'recipesNext',      'recipesDots',      200, 16);
+var testimonialsC = makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testimonialsNext', 'testimonialsDots', 320, 20);
+
+/* ── Autoplay apenas quando visível ── */
+[recipesC, testimonialsC].forEach(function(c) {
+  if (!c.wrap) return;
+  new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { c.start(); } else { c.stop(); }
+    });
+  }, { threshold: 0.3 }).observe(c.wrap);
+});
 
 
 /* ── Social proof popups ── */
