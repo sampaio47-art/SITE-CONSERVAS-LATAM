@@ -253,9 +253,9 @@
 
     <!-- H1 -->
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-5" style="font-family:'Playfair Display',serif; text-shadow:0 2px 12px rgba(0,0,0,.4);">
-      <span class="block text-yellow-300">Crea Conservas Artesanales</span>
-      <span class="block text-white">100% Seguras que Duran Años</span>
-      <span class="block text-green-200 text-xl sm:text-2xl md:text-3xl mt-1">y Transforman tu Cocina en un Santuario de Sabor</span>
+      <span class="block text-yellow-300">Aprende a Preparar Conservas Artesanales</span>
+      <span class="block text-white">Seguras, Deliciosas</span>
+      <span class="block text-green-200 text-xl sm:text-2xl md:text-3xl mt-1">y con Apariencia Gourmet</span>
     </h1>
 
     <!-- Expert image -->
@@ -278,9 +278,7 @@
 
     <!-- Sub-headline -->
     <p class="text-sm sm:text-base text-green-100 mb-6 leading-relaxed" style="font-family:'Montserrat',sans-serif; text-shadow:0 1px 4px rgba(0,0,0,.25);">
-      Descubre el Método Secreto para más de
-      <strong class="text-yellow-300">100 Recetas Artesanales que Deleitan los Sentidos</strong>
-      y llenan de orgullo tu mesa. ¡Con 3 Bonos Exclusivos incluidos hoy!
+      Descubre más de <strong class="text-yellow-300">101 conservas explicadas paso a paso</strong> para crear frascos bonitos, sabores equilibrados y preparaciones que duran mucho más tiempo. Incluye <strong class="text-yellow-300">3 bonos exclusivos</strong> y actualizaciones mensuales.
     </p>
 
     <!-- CTA principal -->
@@ -1163,15 +1161,6 @@
 <!-- ══════════════════════════════════════════
      SOCIAL PROOF POPUP
 ══════════════════════════════════════════ -->
-<!-- ── Floating sticky CTA ── -->
-<div id="float-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;padding:10px 14px 14px;background:linear-gradient(135deg,#0d2e1c,#1a4731);box-shadow:0 -4px 24px rgba(0,0,0,.45);border-top:2px solid #c9a227;">
-  <a href="https://pay.hotmart.com/N105440462S?checkoutMode=10" target="_blank" rel="noopener"
-     class="cta-pulse btn-hover block text-center bg-gold text-forest font-black py-3 px-4 rounded-full w-full text-sm"
-     style="font-family:'Montserrat',sans-serif;">
-    🥒 ¡QUIERO MIS CONSERVAS POR SOLO $8,90 USD! →
-  </a>
-  <button id="float-cta-close" aria-label="Cerrar" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.55);font-size:22px;cursor:pointer;line-height:1;padding:4px 8px;">×</button>
-</div>
 
 <div id="sp-popup" role="status" aria-live="polite">
   <div class="flex items-start gap-3">
@@ -1347,19 +1336,6 @@ var testimonialsC = makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testi
 })();
 
 
-/* ── Floating sticky CTA ── */
-(function() {
-  var floatEl = document.getElementById('float-cta');
-  var hero = document.querySelector('.hero-bg');
-  if (!floatEl || !hero) return;
-  var dismissed = false;
-  document.getElementById('float-cta-close').addEventListener('click', function() {
-    dismissed = true; floatEl.style.display = 'none';
-  });
-  new IntersectionObserver(function(entries) {
-    if (!dismissed) floatEl.style.display = entries[0].isIntersecting ? 'none' : 'block';
-  }, { threshold: 0 }).observe(hero);
-})();
 </script>
 
 </body>
