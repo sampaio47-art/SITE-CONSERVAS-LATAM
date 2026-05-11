@@ -143,15 +143,19 @@
     /* ── Carousel ── */
     .carousel-track { display:flex; transition:transform .4s cubic-bezier(.25,.8,.25,1); will-change:transform; }
     .carousel-wrap { overflow:hidden; }
+    @keyframes carouselPulse {
+      0%,100% { transform:scale(1);   box-shadow:0 4px 12px rgba(0,0,0,.2); }
+      50%      { transform:scale(1.1); box-shadow:0 6px 20px rgba(201,162,39,.45); }
+    }
     .carousel-btn {
       width:40px; height:40px; border-radius:50%;
       background: #1a4731; color:#f0c040;
       display:flex; align-items:center; justify-content:center;
       cursor:pointer; border:none; flex-shrink:0;
       box-shadow:0 4px 12px rgba(0,0,0,.2);
-      transition:background .18s, transform .18s;
+      animation: carouselPulse 2s ease-in-out infinite;
     }
-    .carousel-btn:hover { background:#2E8B57; transform:scale(1.08); }
+    .carousel-btn:hover { animation:none; background:#2E8B57; transform:scale(1.12); box-shadow:0 6px 20px rgba(46,139,87,.4); transition:background .18s, transform .18s, box-shadow .18s; }
     .carousel-dot { width:8px; height:8px; border-radius:50%; background:#cbd5e1; transition:background .2s, transform .2s; }
     .carousel-dot.active { background:#c9a227; transform:scale(1.3); }
 
@@ -235,11 +239,6 @@
 ══════════════════════════════════════════ -->
 <section class="hero-bg text-white pt-10 pb-14 px-4">
   <div class="max-w-xl mx-auto text-center">
-
-    <!-- Eyebrow -->
-    <div class="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 rounded-full px-4 py-1.5 text-xs font-semibold text-yellow-200 mb-5 tracking-wide">
-      🏺 Guía Completa + 3 Bonos Exclusivos
-    </div>
 
     <!-- H1 -->
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-5" style="font-family:'Playfair Display',serif; text-shadow:0 2px 12px rgba(0,0,0,.4);">
@@ -495,11 +494,6 @@
       </div>
     </div>
 
-    <div class="text-center mt-10">
-      <a href="#pricing" class="cta-pulse btn-hover inline-block bg-gold text-forest font-black text-lg py-4 px-10 rounded-full shadow-xl" style="font-family:'Montserrat',sans-serif;">
-        ✨ ¡QUIERO CREAR EXPERIENCIAS MEMORABLES!
-      </a>
-    </div>
   </div>
 </section>
 
@@ -717,9 +711,6 @@
     <div class="mt-8 rounded-2xl p-6 text-center text-white" style="background:linear-gradient(135deg,#1a4731,#2E8B57);">
       <p class="text-xl md:text-2xl font-black" style="font-family:'Playfair Display',serif;">+ ¡Más de 85 experiencias más te esperan adentro! 🎁</p>
       <p class="text-green-100 text-sm mt-2" style="font-family:'Montserrat',sans-serif;">Encurtidos · Mermeladas · Fermentados · Jarabes · Salmueras · y muchas sorpresas más</p>
-      <a href="#pricing" class="inline-block mt-4 bg-gold text-forest font-black text-base py-3 px-8 rounded-full shadow-xl transition-all btn-hover" style="font-family:'Montserrat',sans-serif;">
-        ✨ ¡QUIERO TODAS LAS RECETAS POR $8,90!
-      </a>
     </div>
   </div>
 </section>
@@ -967,11 +958,6 @@
       </div>
     </div>
 
-    <div class="text-center mt-8">
-      <a href="#pricing" class="cta-pulse btn-hover inline-block bg-gold text-forest font-black text-lg py-4 px-10 rounded-full shadow-xl" style="font-family:'Montserrat',sans-serif;">
-        ✨ ¡YO TAMBIÉN QUIERO SENTIR ESTO — $8,90!
-      </a>
-    </div>
   </div>
 </section>
 
@@ -1276,33 +1262,35 @@ makeCarousel('testimonialsTrack', 'testimonialsPrev', 'testimonialsNext', 'testi
 
 /* ── Social proof popups ── */
 (function () {
-  var people = [
-    { name: 'Valentina G.', city: 'Ciudad de México', color: '#2E8B57', initial: 'V', mins: '2 minutos' },
-    { name: 'Sofía R.',     city: 'Bogotá',           color: '#c9a227', initial: 'S', mins: '5 minutos' },
-    { name: 'Camila F.',    city: 'Buenos Aires',     color: '#e07b39', initial: 'C', mins: '8 minutos' },
-    { name: 'Daniela M.',   city: 'Santiago',         color: '#6d5a9e', initial: 'D', mins: '12 minutos' },
-    { name: 'Paola T.',     city: 'Lima',             color: '#2E8B57', initial: 'P', mins: '15 minutos' },
-    { name: 'Mariana L.',   city: 'Guadalajara',      color: '#c0392b', initial: 'M', mins: '18 minutos' },
-    { name: 'Andrea V.',    city: 'Medellín',         color: '#1a7a9e', initial: 'A', mins: '22 minutos' },
-    { name: 'Isabella N.',  city: 'Montevideo',       color: '#c9a227', initial: 'I', mins: '25 minutos' },
+  var notifications = [
+    { msg: '¡Sofía de Buenos Aires acaba de comprar el Paquete Completo!',       color: '#c9a227', initial: 'S' },
+    { msg: '¡Juan de Ciudad de México ya está creando sus conservas!',           color: '#2E8B57', initial: 'J' },
+    { msg: '¡María de Bogotá adquirió el método secreto!',                       color: '#e07b39', initial: 'M' },
+    { msg: '¡Pedro de Lima garantizó su acceso a las 100+ recetas!',             color: '#1a7a9e', initial: 'P' },
+    { msg: '¡Valentina de Santiago acaba de unirse al Paquete Completo!',        color: '#6d5a9e', initial: 'V' },
+    { msg: '¡Camila de Guadalajara ya tiene sus 3 Bonos Exclusivos!',            color: '#c0392b', initial: 'C' },
+    { msg: '¡Lucía de Montevideo está transformando su cocina ahora mismo!',     color: '#2E8B57', initial: 'L' },
+    { msg: '¡Andrea de Medellín garantizó conservas 100% seguras!',             color: '#c9a227', initial: 'A' },
+    { msg: '¡Daniela de Quito acaba de descargar la Guía Completa!',            color: '#e07b39', initial: 'D' },
+    { msg: '¡Carlos de Asunción compró el Paquete hace menos de 5 minutos!',    color: '#1a4731', initial: 'C' },
   ];
   var popup = document.getElementById('sp-popup');
-  var idx = 0;
+  var idx = Math.floor(Math.random() * notifications.length);
 
   function show() {
-    var p = people[idx % people.length]; idx++;
-    document.getElementById('sp-avatar').style.background = p.color;
-    document.getElementById('sp-avatar').textContent = p.initial;
-    document.getElementById('sp-name').textContent = p.name + ' de ' + p.city;
-    document.getElementById('sp-time').textContent = 'hace ' + p.mins;
+    var n = notifications[idx % notifications.length]; idx++;
+    document.getElementById('sp-avatar').style.background = n.color;
+    document.getElementById('sp-avatar').textContent = n.initial;
+    document.getElementById('sp-name').textContent = n.msg;
+    document.getElementById('sp-time').textContent = '';
     popup.classList.add('show');
-    setTimeout(function(){ popup.classList.remove('show'); }, 4000);
+    setTimeout(function(){ popup.classList.remove('show'); }, 3500);
   }
 
   setTimeout(function(){
     show();
-    setInterval(function(){ show(); }, 12000);
-  }, 6000);
+    setInterval(function(){ show(); }, 10000);
+  }, 5000);
 })();
 </script>
 
